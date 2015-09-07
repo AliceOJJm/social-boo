@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RubyCritic</title>
+    <link href="assets/stylesheets/application.css" media="screen, projection, print" rel="stylesheet" type="text/css">
+    <link href="assets/stylesheets/prettify.custom_theme.css" media="screen, projection, print" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header class="project-header group">
+      <div class="container">
+        <h1 class="logo"><a href="overview.html" class="logo-link">RubyCritic</a></h1>
+        <nav class="project-nav">
+          <a href="overview.html" class="project-nav-item">Overview</a>
+          <a href="code_index.html" class="project-nav-item">Code</a>
+          <a href="smells_index.html" class="project-nav-item">Smells</a>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <div id="js-chart-container" class="chart-container"></div>
+
+<script type="text/javascript">
+  var turbulenceData = [{"name":"Boot","x":1,"y":0},{"name":"SessionStore","x":1,"y":0},{"name":"MimeTypes","x":1,"y":0},{"name":"BacktraceSilencers","x":1,"y":0},{"name":"FilterParameterLogging","x":1,"y":0},{"name":"WrapParameters","x":1,"y":0},{"name":"CookiesSerializer","x":1,"y":0},{"name":"Devise","x":2,"y":0},{"name":"Inflections","x":1,"y":0},{"name":"Assets","x":2,"y":0},{"name":"Environment","x":1,"y":0},{"name":"Application","x":3,"y":0},{"name":"Production","x":5,"y":0},{"name":"Development","x":6,"y":0},{"name":"Test","x":4,"y":0},{"name":"Routes","x":19,"y":12},{"name":"VideosHelperSpec","x":3,"y":0},{"name":"SongsHelperSpec","x":3,"y":0},{"name":"SubscribtionsHelperSpec","x":1,"y":0},{"name":"FriendsHelperSpec","x":2,"y":0},{"name":"UsersHelperSpec","x":1,"y":0},{"name":"PicturesHelperSpec","x":3,"y":0},{"name":"MessagesHelperSpec","x":3,"y":0},{"name":"DialoguesHelperSpec","x":3,"y":0},{"name":"PostsHelperSpec","x":2,"y":0},{"name":"PostsRoutingSpec","x":1,"y":40},{"name":"UserSpec","x":1,"y":0},{"name":"UsersRoleSpec","x":1,"y":0},{"name":"MessageSpec","x":3,"y":0},{"name":"FriendshipSpec","x":1,"y":0},{"name":"PostSpec","x":2,"y":0},{"name":"SubscriptionSpec","x":1,"y":0},{"name":"VideoSpec","x":3,"y":0},{"name":"SongSpec","x":3,"y":0},{"name":"PictureSpec","x":4,"y":0},{"name":"DialogueSpec","x":2,"y":0},{"name":"CommunitySpec","x":2,"y":0},{"name":"RoleSpec","x":1,"y":0},{"name":"PostsSpec","x":1,"y":12},{"name":"SubscribtionsControllerSpec","x":1,"y":0},{"name":"PostsControllerSpec","x":1,"y":286},{"name":"SongsControllerSpec","x":1,"y":0},{"name":"PicturesControllerSpec","x":1,"y":0},{"name":"VideosControllerSpec","x":1,"y":0},{"name":"FriendsControllerSpec","x":1,"y":0},{"name":"UsersControllerSpec","x":1,"y":0},{"name":"DialoguesControllerSpec","x":1,"y":0},{"name":"MessagesControllerSpec","x":1,"y":0},{"name":"Show.html.erbSpec","x":1,"y":20},{"name":"Index.html.erbSpec","x":1,"y":15},{"name":"New.html.erbSpec","x":1,"y":13},{"name":"Edit.html.erbSpec","x":1,"y":13},{"name":"SubscribtionsHelper","x":1,"y":0},{"name":"UsersHelper","x":1,"y":0},{"name":"VideosHelper","x":1,"y":0},{"name":"PostsHelper","x":1,"y":0},{"name":"DialoguesHelper","x":1,"y":0},{"name":"SongsHelper","x":1,"y":0},{"name":"PicturesHelper","x":1,"y":0},{"name":"ApplicationHelper","x":2,"y":4},{"name":"FriendsHelper","x":4,"y":0},{"name":"MessagesHelper","x":1,"y":0},{"name":"Config","x":1,"y":0},{"name":"UsersRole","x":1,"y":0},{"name":"Subscription","x":1,"y":0},{"name":"Picture","x":2,"y":0},{"name":"Ability","x":3,"y":17},{"name":"Friendship","x":1,"y":0},{"name":"Post","x":1,"y":0},{"name":"Role","x":2,"y":0},{"name":"Community","x":1,"y":0},{"name":"Video","x":2,"y":0},{"name":"User","x":10,"y":67},{"name":"Song","x":3,"y":8},{"name":"Dialogue","x":1,"y":0},{"name":"Message","x":1,"y":0},{"name":"PostsController","x":4,"y":55},{"name":"SongsController","x":4,"y":58},{"name":"RegistrationsController","x":2,"y":7},{"name":"PicturesController","x":3,"y":41},{"name":"ApplicationController","x":8,"y":21},{"name":"UsersController","x":11,"y":45},{"name":"VideosController","x":3,"y":48},{"name":"MessagesController","x":3,"y":27},{"name":"SubscribtionsController","x":7,"y":23},{"name":"DialoguesController","x":2,"y":31},{"name":"FriendsController","x":5,"y":25},{"name":"AppController","x":1,"y":1},{"name":"AddFieldToSub","x":1,"y":1},{"name":"CreateVideos","x":2,"y":6},{"name":"CreateFriendships","x":1,"y":5},{"name":"AddFileSong","x":1,"y":0},{"name":"AddFileVideo","x":2,"y":0},{"name":"AddConfirmableToDevise","x":1,"y":7},{"name":"CreateCommunities","x":1,"y":7},{"name":"AddAttachmentAvatar","x":1,"y":1},{"name":"DeleteAvatars","x":1,"y":2},{"name":"AddVideoFile","x":1,"y":0},{"name":"AddFkFriendship","x":1,"y":2},{"name":"CreateIndexes","x":1,"y":2},{"name":"AddBd","x":1,"y":1},{"name":"CreatePosts","x":1,"y":5},{"name":"AddMetadataToSong","x":1,"y":1},{"name":"AddConfirmableToDeviseV1","x":1,"y":0},{"name":"CreateSubscriptions","x":1,"y":5},{"name":"AddUrls","x":1,"y":2},{"name":"Add","x":1,"y":1},{"name":"AddAvatarUrl","x":1,"y":0},{"name":"AddUrlPicture","x":1,"y":1},{"name":"CreateUsersRoles","x":1,"y":5},{"name":"CreatePictures","x":2,"y":5},{"name":"AddAvatarUr","x":2,"y":1},{"name":"AddUsersCol","x":1,"y":3},{"name":"CreateMessages","x":1,"y":7},{"name":"AddDialogueRefToMessages","x":1,"y":1},{"name":"CreateDialogues","x":1,"y":7},{"name":"CreateRoles","x":1,"y":4},{"name":"DelReceiver","x":1,"y":1},{"name":"CreateSongs","x":1,"y":8},{"name":"DeviseCreateUsers","x":1,"y":16},{"name":"AddFileImage","x":1,"y":2},{"name":"Schema","x":10,"y":157},{"name":"Seeds","x":1,"y":0},{"name":"TestHelper","x":1,"y":0}];
+</script>
+
+    </div>
+    <script src='assets/javascripts/jquery-2.1.0.js'></script>
+    <script src='assets/javascripts/jquery.tablesorter.js'></script>
+    <script src='assets/javascripts/jquery.floatThead-v1.2.7.js'></script>
+    <script src='assets/javascripts/jquery.timeago-v1.4.1.js'></script>
+    <script src='assets/javascripts/highcharts.src-4.0.1.js'></script>
+    <script src='assets/javascripts/jquery.scrollTo-1.4.11.js'></script>
+    <script src='assets/javascripts/prettify-4-Mar-2013.js'></script>
+    <script src='assets/javascripts/application.js'></script>
+  </body>
+</html>

@@ -1,0 +1,340 @@
+/*
+ *= require bootstrap
+ *= require_tree ../javascripts/jplayer
+ *= require Buttons
+ *= require x-editable
+ *= require angular-bootstrap-lightbox
+ *= require ng-tags-input
+ *= require ../bower_components/ng-tags-input/ng-tags-input.bootstrap.min.css
+ *= require angular-ui-notification
+ *= require_tree .
+ *= require_self
+ */
+
+
+body {
+   height: 100%;
+   width: 70%;
+   font-family:verdana,arial,sans-serif;
+   color:#555555;
+   background: url('light-gray-bg.png');
+   background-size: 70%;
+   background-position:center;
+   background-repeat:repeat-y;
+   margin: auto;
+}
+
+.nav {
+   font-family:Arial,sans-serif;
+   font-size:13px;
+}
+
+a {
+  color:#222222;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration:none;
+}
+
+hr {
+  border-color:#dedede;
+}
+
+.wrapper:before, .wrapper:after,
+.column:before, .column:after {
+    content: "";
+    display: table;
+}
+
+.wrapper:after,
+.column:after {
+    clear: both;
+}
+
+.column {
+    height: 100%;
+    overflow: auto;
+    *zoom:1;
+}
+
+.padding {
+    padding: 20px;
+}
+
+.full{
+  padding-top:7%;
+  background-size:cover;
+  background-attachment:fixed;
+}
+
+.box {
+    bottom: 0; /* increase for footer use */
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.divider {
+  margin-top:32px;
+}
+
+.navbar-blue {
+    border-width:0;
+    border-radius: 0px 0px 8px 8px;
+    background-color:rgba(100,149,237, 0.67);
+    color: #ffffff;
+    font-family:arial,sans-serif;
+    top:0;
+    position:fixed;
+    width:72%;
+    margin: auto;
+}
+
+.navbar-blue li > a,.navbar-toggle  {
+   color:#F5FFFA;
+}
+
+.navbar-blue .dropdown-menu li a {color:#2A4888;}
+.navbar-blue .dropdown-menu li > a {padding-left:30px;}
+
+.navbar-blue li>a:hover, .navbar-blue li>a:focus, .navbar-blue .open, .navbar-blue .open>a, .navbar-blue .open>a:hover, .navbar-blue .open>a:focus {
+   background-color:rgba(100,149,237, 1);
+   color:#fff;
+}
+
+#main {
+   padding-left:0;
+   padding-right:0;
+}
+#main .img-circle {
+   margin-top:18px;
+   height:70px;
+   width:70px;
+}
+
+.logo {
+  display:block;
+  padding:3px;
+  background-color:#fff;
+  color:rgba(70,130,180, 0.9);
+  height:28px;
+  margin:9px;
+  margin-right:2px;
+  margin-left:15px;
+  font-size:20px;
+  font-weight:700;
+  text-align:center;
+  text-decoration:none;
+  text-shadow:0 0 1px;
+  border-radius:2px;
+}
+#sidebar-footer {
+  background-color:#444;
+  position:absolute;
+  bottom:5px;
+  padding:5px;
+}
+#footer {
+  margin-bottom:20px;
+}
+
+/* bootstrap overrides */
+
+h1,h2,h3 {
+   font-weight:800;
+}
+
+.navbar-toggle, .close {
+  outline:0;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+.btn-primary,.label-primary,.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus  {
+  background-color:#3B5999;
+    color:#fffffe;
+}
+.btn-default {
+    color:#666666;
+    text-shadow:0 0 1px rgba(0,0,0,.3);
+}
+.form-control {
+  
+}
+
+.panel textarea, .well textarea, textarea.form-control
+{
+   resize: none;
+}
+  
+.badge{
+   color:rgba(70,130,180, 0.9);
+   background-color:#fff;
+}
+.badge:hover, .badge-inverse{
+   background-color:rgba(70,130,180, 0.9);
+   color:#fff;
+}
+    
+.jumbotron {
+  background-color:transparent;
+}
+.label-default {
+  background-color:#dddddd;
+}
+.page-header {
+  margin-top: 55px;
+  padding-top: 9px;
+  border-top:1px solid #eeeeee;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+
+.panel-default .panel-heading {
+  background-color:#f9fafb;
+  color:#555555;
+}
+
+.col-sm-9.full {
+    width: 100%;
+}
+
+.modal-header, .modal-footer {
+  background-color:#f2f2f2;
+    font-weight:800;
+    font-size:12px;
+}
+
+.modal-footer i, .well i {
+    font-size:20px;
+    color:#c0c0c0;
+}
+
+.modal-body {
+  padding:0px;
+}
+
+.modal-body textarea.form-control
+{
+   resize: none;
+   border:0;
+   box-shadow:0 0 0;
+}
+
+small.text-muted {
+  font-family:courier,courier-new,monospace;
+}
+
+/* adjust the contents on smaller devices */
+@media (max-width: 768px) {
+
+ .padding {
+    padding: 7px;
+  }
+
+  .full{
+    padding-top:20px;
+  }
+
+  .navbar-blue {
+  background-color:#3B5999;
+    top:0;
+    width:100%;
+    position:relative;
+  }
+
+}
+
+/* Credit to bootsnipp.com for the css for the color graph */
+.colorgraph {
+  height: 5px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+
+.sign-form{
+  max-width: 420px;
+  padding: 30px 38px 50px;
+  margin: 7% auto;
+  background-color: #eee;
+  border: 3px dotted rgba(0,0,0,0.1);  
+}
+
+.signup-form{
+  
+  max-width: 800px;
+  padding: 15px 20px 50px;
+  margin: auto;
+  background-color: #eee;
+  border: 3px dotted rgba(0,0,0,0.1);  
+}
+
+.form-signin-heading{
+  
+  text-align:center;
+  position: relative;
+  font-size: 22px;
+  height: auto;
+  padding: 10px;
+}
+
+.no_display{
+  display: none;
+}
+
+.center_button{
+  width: 180px;
+  display:block;
+  margin: auto;
+}
+
+.center{
+  width: 100%;
+  display:block;
+  margin: auto;
+  padding: auto;
+  text-align: center;
+}
+
+.center-post{
+  width: 60%;
+  display:block;
+  margin: auto;
+  padding: auto;
+}
+
+.player-center{
+  width: 54%;
+  margin: auto;
+  margin-top: 2%;
+}
+
+.center_img{
+  display:block;
+  margin: auto;
+}
+
+.avatar{
+  width: 100%;
+}
+
+.avatar_thumb{
+  float: left;
+  width: 35px;
+  margin: 5px;
+}
+
+.font16{
+  font-size: 16px;
+}

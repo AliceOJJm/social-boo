@@ -1,0 +1,50 @@
+<div class="container center">
+    <div class="row">
+            <div class="panel panel-primary">
+                <div class="panel-heading" id="accordion">
+                    <span class="glyphicon glyphicon-comment"></span> Chat
+                    <div class="dropdown pull-right">
+					  <a class="dropdown-toggle glyphicon glyphicon-cog" type="button" id="settings" data-toggle="dropdown"></a>
+					  <ul class="dropdown-menu" aria-labelledby="settings">
+					    <li><a ng-click="clearHistory()">Clear message history</a></li>
+					  </ul>
+					</div>
+                </div>
+                <div class="d_panel-body">
+                	<h5 align="center" ng-show="!messages.length">Message history will be displayed here.</h5>
+                    <ul class="chat">
+                    	<div ng-repeat = "message in messages">
+	                        <li class="left clearfix">
+	                        	<a ng-href="/app/id{{message.content.message.sender_id}}" class="chat-img pull-left">
+		                            <img ng-src="{{message.user_pic}}" alt="User Avatar" class="margin_10" width="50px"/>
+		                        </a>
+	                            <div class="chat-body clearfix">
+	                                <div class="header">
+	                                    <a ng-href="/app/id{{message.content.message.sender_id}}"><strong class="pull-left primary-font">{{message.user_name}}</strong></a> 
+	                                    <small class="pull-right text-muted">
+	                                        <span class="glyphicon glyphicon-time"></span>{{message.content.message.created_at | date : 'MMM d, y h:mm a'}}
+	                                    </small>
+	                                </div>
+	                                <br>
+	                                <div class="pull-left">{{message.content.message.text}}</div>
+	                                <div class="pull-right close" ng-click="deleteMessage(message)">×</div>
+	                            </div>
+	                        </li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                	<form ng-submit="sendMessage()">
+	                    <div class="input-group">
+	                        <textarea id="btn-input" class="form-control input-sm" placeholder="Type your message here..." ng-model="message"></textarea>
+	                        <span class="input-group-btn">
+	                            <button class="btn btn-warning btn-sm" type="submit">
+	                                Send
+	                            </button>
+	                        </span>
+	                    </div>
+	               </form>
+                </div>
+            </div>
+    </div>
+</div>

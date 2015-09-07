@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RubyCritic</title>
+    <link href="../assets/stylesheets/application.css" media="screen, projection, print" rel="stylesheet" type="text/css">
+    <link href="../assets/stylesheets/prettify.custom_theme.css" media="screen, projection, print" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header class="project-header group">
+      <div class="container">
+        <h1 class="logo"><a href="../overview.html" class="logo-link">RubyCritic</a></h1>
+        <nav class="project-nav">
+          <a href="../overview.html" class="project-nav-item">Overview</a>
+          <a href="../code_index.html" class="project-nav-item">Code</a>
+          <a href="../smells_index.html" class="project-nav-item">Smells</a>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <div class="file-header group rated">
+  <span class="rating rating-d circled-text circle">
+    D
+  </span>
+  <h2 class="file-name">Schema</h2>
+
+  <span class="file-committed-at">
+    
+      Updated <time class='js-timeago' datetime='2015-07-19 12:48:33 +0300'>2015-07-19 12:48:33 +0300</time>
+    
+  </span>
+
+  <div class="file-stats group">
+    <div class="file-stat">
+      157 complexity
+    </div>
+    <div class="file-stat">
+      N/A complexity per method
+    </div>
+    <div class="file-stat">
+      10 churn
+    </div>
+    <div class="file-stat">
+      0 methods
+    </div>
+    <div class="file-stat">
+      148 duplication
+    </div>
+  </div>
+
+  
+    <button id="js-toggle-smells" class="smells-toggle-button button">Toggle Smells</button>
+  
+</div>
+
+<code class="prettyprint linenums lang-ruby file-code js-file-code"># encoding: UTF-8
+# This file is auto-generated from the current state of the database. Instead
+# of editing this file, please use the migrations feature of Active Record to
+# incrementally modify your database, and then regenerate this schema definition.
+#
+# Note that this schema.rb definition is the authoritative source for your
+# database schema. If you need to create the application database on another
+# system, you should be using db:schema:load, not running all the migrations
+# from scratch. The latter is a flawed and unsustainable approach (the more migrations
+# you&#39;ll amass, the slower it&#39;ll run and the greater likelihood for issues).
+#
+# It&#39;s strongly recommended that you check this file into your version control system.
+
+ActiveRecord::Schema.define(version: 20150716204801) do
+
+  create_table &quot;communities&quot;, force: :cascade do |t|
+    t.string   &quot;title&quot;,       limit: 255
+    t.string   &quot;aim&quot;,         limit: 255
+    t.text     &quot;description&quot;, limit: 65535
+    t.datetime &quot;created_at&quot;,                null: false
+    t.datetime &quot;updated_at&quot;,                null: false
+  end
+
+  create_table &quot;dialogues&quot;, force: :cascade do |t|<ul class="nocode smells js-smells">  <li class="smell old">    <span class="description">(DuplicateCode) Similar code found in 2 nodes                        <a href="schema.html#L24" class="js-smell-location">0</a>                  <a href="schema.html#L84" class="js-smell-location">1</a>                  </span>  </li></ul>
+    t.string   &quot;title&quot;,      limit: 255
+    t.datetime &quot;created_at&quot;,             null: false
+    t.datetime &quot;updated_at&quot;,             null: false
+  end
+
+  create_table &quot;dialogues_users&quot;, id: false, force: :cascade do |t|
+    t.integer &quot;dialogue_id&quot;, limit: 4
+    t.integer &quot;user_id&quot;,     limit: 4
+  end
+
+  add_index &quot;dialogues_users&quot;, [&quot;dialogue_id&quot;], name: &quot;index_dialogues_users_on_dialogue_id&quot;, using: :btree
+  add_index &quot;dialogues_users&quot;, [&quot;user_id&quot;], name: &quot;index_dialogues_users_on_user_id&quot;, using: :btree
+
+  create_table &quot;friendships&quot;, force: :cascade do |t|<ul class="nocode smells js-smells">  <li class="smell old">    <span class="description">(DuplicateCode) Similar code found in 3 nodes                        <a href="schema.html#L38" class="js-smell-location">0</a>                  <a href="schema.html#L75" class="js-smell-location">1</a>                  <a href="schema.html#L146" class="js-smell-location">2</a>                  </span>  </li></ul>
+    t.integer  &quot;user_id&quot;,    limit: 4
+    t.integer  &quot;friend_id&quot;,  limit: 4
+    t.datetime &quot;created_at&quot;,           null: false
+    t.datetime &quot;updated_at&quot;,           null: false
+  end
+
+  add_index &quot;friendships&quot;, [&quot;friend_id&quot;], name: &quot;index_friendships_on_friend_id&quot;, using: :btree
+  add_index &quot;friendships&quot;, [&quot;user_id&quot;], name: &quot;index_friendships_on_user_id&quot;, using: :btree
+
+  create_table &quot;messages&quot;, force: :cascade do |t|
+    t.text     &quot;text&quot;,        limit: 65535
+    t.integer  &quot;sender_id&quot;,   limit: 4
+    t.integer  &quot;user_id&quot;,     limit: 4
+    t.datetime &quot;created_at&quot;,                null: false
+    t.datetime &quot;updated_at&quot;,                null: false
+    t.integer  &quot;dialogue_id&quot;, limit: 4
+  end
+
+  add_index &quot;messages&quot;, [&quot;dialogue_id&quot;], name: &quot;index_messages_on_dialogue_id&quot;, using: :btree
+  add_index &quot;messages&quot;, [&quot;user_id&quot;], name: &quot;index_messages_on_user_id&quot;, using: :btree
+
+  create_table &quot;pictures&quot;, force: :cascade do |t|
+    t.integer  &quot;user_id&quot;,           limit: 4
+    t.datetime &quot;created_at&quot;,                    null: false
+    t.datetime &quot;updated_at&quot;,                    null: false
+    t.string   &quot;file_file_name&quot;,    limit: 255
+    t.string   &quot;file_content_type&quot;, limit: 255
+    t.integer  &quot;file_file_size&quot;,    limit: 4
+    t.datetime &quot;file_updated_at&quot;
+    t.string   &quot;url&quot;,               limit: 255
+    t.string   &quot;thumb_url&quot;,         limit: 255
+    t.string   &quot;medium_url&quot;,        limit: 255
+  end
+
+  add_index &quot;pictures&quot;, [&quot;user_id&quot;], name: &quot;index_pictures_on_user_id&quot;, using: :btree
+
+  create_table &quot;posts&quot;, force: :cascade do |t|<ul class="nocode smells js-smells">  <li class="smell old">    <span class="description">(DuplicateCode) Similar code found in 3 nodes                        <a href="schema.html#L38" class="js-smell-location">0</a>                  <a href="schema.html#L75" class="js-smell-location">1</a>                  <a href="schema.html#L146" class="js-smell-location">2</a>                  </span>  </li></ul>
+    t.text     &quot;content&quot;,    limit: 65535
+    t.integer  &quot;user_id&quot;,    limit: 4
+    t.datetime &quot;created_at&quot;,               null: false
+    t.datetime &quot;updated_at&quot;,               null: false
+  end
+
+  add_index &quot;posts&quot;, [&quot;user_id&quot;], name: &quot;index_posts_on_user_id&quot;, using: :btree
+
+  create_table &quot;roles&quot;, force: :cascade do |t|<ul class="nocode smells js-smells">  <li class="smell old">    <span class="description">(DuplicateCode) Similar code found in 2 nodes                        <a href="schema.html#L24" class="js-smell-location">0</a>                  <a href="schema.html#L84" class="js-smell-location">1</a>                  </span>  </li></ul>
+    t.string   &quot;name&quot;,       limit: 255
+    t.datetime &quot;created_at&quot;,             null: false
+    t.datetime &quot;updated_at&quot;,             null: false
+  end
+
+  create_table &quot;songs&quot;, force: :cascade do |t|
+    t.string   &quot;url&quot;,               limit: 255
+    t.integer  &quot;user_id&quot;,           limit: 4
+    t.string   &quot;title&quot;,             limit: 255
+    t.string   &quot;performer&quot;,         limit: 255
+    t.string   &quot;genre&quot;,             limit: 255
+    t.datetime &quot;created_at&quot;,                      null: false
+    t.datetime &quot;updated_at&quot;,                      null: false
+    t.string   &quot;file_file_name&quot;,    limit: 255
+    t.string   &quot;file_content_type&quot;, limit: 255
+    t.integer  &quot;file_file_size&quot;,    limit: 4
+    t.datetime &quot;file_updated_at&quot;
+    t.text     &quot;metadata&quot;,          limit: 65535
+  end
+
+  add_index &quot;songs&quot;, [&quot;user_id&quot;], name: &quot;index_songs_on_user_id&quot;, using: :btree
+
+  create_table &quot;subscriptions&quot;, force: :cascade do |t|
+    t.integer  &quot;leader_id&quot;,     limit: 4
+    t.integer  &quot;subscriber_id&quot;, limit: 4
+    t.datetime &quot;created_at&quot;,                              null: false
+    t.datetime &quot;updated_at&quot;,                              null: false
+    t.boolean  &quot;viewed&quot;,        limit: 1, default: false
+  end
+
+  create_table &quot;users&quot;, force: :cascade do |t|<ul class="nocode smells js-smells">  <li class="smell old">    <span class="description">(HighComplexity) create_table#users has a flog score of 39          </span>  </li></ul>
+    t.string   &quot;email&quot;,                  limit: 255, default: &quot;&quot;, null: false
+    t.string   &quot;encrypted_password&quot;,     limit: 255, default: &quot;&quot;, null: false
+    t.string   &quot;reset_password_token&quot;,   limit: 255
+    t.datetime &quot;reset_password_sent_at&quot;
+    t.datetime &quot;remember_created_at&quot;
+    t.integer  &quot;sign_in_count&quot;,          limit: 4,   default: 0,  null: false
+    t.datetime &quot;current_sign_in_at&quot;
+    t.datetime &quot;last_sign_in_at&quot;
+    t.string   &quot;current_sign_in_ip&quot;,     limit: 255
+    t.string   &quot;last_sign_in_ip&quot;,        limit: 255
+    t.datetime &quot;created_at&quot;
+    t.datetime &quot;updated_at&quot;
+    t.string   &quot;first_name&quot;,             limit: 255
+    t.string   &quot;last_name&quot;,              limit: 255
+    t.string   &quot;gender&quot;,                 limit: 255
+    t.string   &quot;avatar_file_name&quot;,       limit: 255
+    t.string   &quot;avatar_content_type&quot;,    limit: 255
+    t.integer  &quot;avatar_file_size&quot;,       limit: 4
+    t.datetime &quot;avatar_updated_at&quot;
+    t.string   &quot;avatar_url&quot;,             limit: 255
+    t.date     &quot;birth_date&quot;
+    t.string   &quot;confirmation_token&quot;,     limit: 255
+    t.datetime &quot;confirmed_at&quot;
+    t.datetime &quot;confirmation_sent_at&quot;
+    t.string   &quot;unconfirmed_email&quot;,      limit: 255
+  end
+
+  add_index &quot;users&quot;, [&quot;email&quot;], name: &quot;index_users_on_email&quot;, unique: true, using: :btree
+  add_index &quot;users&quot;, [&quot;reset_password_token&quot;], name: &quot;index_users_on_reset_password_token&quot;, unique: true, using: :btree
+
+  create_table &quot;users_roles&quot;, force: :cascade do |t|<ul class="nocode smells js-smells">  <li class="smell old">    <span class="description">(DuplicateCode) Similar code found in 3 nodes                        <a href="schema.html#L38" class="js-smell-location">0</a>                  <a href="schema.html#L75" class="js-smell-location">1</a>                  <a href="schema.html#L146" class="js-smell-location">2</a>                  </span>  </li></ul>
+    t.integer  &quot;user_id&quot;,    limit: 4
+    t.integer  &quot;role_id&quot;,    limit: 4
+    t.datetime &quot;created_at&quot;,           null: false
+    t.datetime &quot;updated_at&quot;,           null: false
+  end
+
+  add_index &quot;users_roles&quot;, [&quot;role_id&quot;], name: &quot;index_users_roles_on_role_id&quot;, using: :btree
+  add_index &quot;users_roles&quot;, [&quot;user_id&quot;], name: &quot;index_users_roles_on_user_id&quot;, using: :btree
+
+  create_table &quot;videos&quot;, force: :cascade do |t|
+    t.string   &quot;url&quot;,               limit: 255
+    t.integer  &quot;user_id&quot;,           limit: 4
+    t.string   &quot;title&quot;,             limit: 255
+    t.datetime &quot;created_at&quot;,                    null: false
+    t.datetime &quot;updated_at&quot;,                    null: false
+    t.string   &quot;file_file_name&quot;,    limit: 255
+    t.string   &quot;file_content_type&quot;, limit: 255
+    t.integer  &quot;file_file_size&quot;,    limit: 4
+    t.datetime &quot;file_updated_at&quot;
+  end
+
+  add_index &quot;videos&quot;, [&quot;user_id&quot;], name: &quot;index_videos_on_user_id&quot;, using: :btree
+
+  add_foreign_key &quot;friendships&quot;, &quot;users&quot;
+  add_foreign_key &quot;friendships&quot;, &quot;users&quot;, column: &quot;friend_id&quot;
+  add_foreign_key &quot;messages&quot;, &quot;dialogues&quot;
+  add_foreign_key &quot;messages&quot;, &quot;users&quot;
+  add_foreign_key &quot;pictures&quot;, &quot;users&quot;
+  add_foreign_key &quot;posts&quot;, &quot;users&quot;
+  add_foreign_key &quot;songs&quot;, &quot;users&quot;
+  add_foreign_key &quot;users_roles&quot;, &quot;roles&quot;
+  add_foreign_key &quot;users_roles&quot;, &quot;users&quot;
+  add_foreign_key &quot;videos&quot;, &quot;users&quot;
+end
+</code>
+
+    </div>
+    <script src='../assets/javascripts/jquery-2.1.0.js'></script>
+    <script src='../assets/javascripts/jquery.tablesorter.js'></script>
+    <script src='../assets/javascripts/jquery.floatThead-v1.2.7.js'></script>
+    <script src='../assets/javascripts/jquery.timeago-v1.4.1.js'></script>
+    <script src='../assets/javascripts/highcharts.src-4.0.1.js'></script>
+    <script src='../assets/javascripts/jquery.scrollTo-1.4.11.js'></script>
+    <script src='../assets/javascripts/prettify-4-Mar-2013.js'></script>
+    <script src='../assets/javascripts/application.js'></script>
+  </body>
+</html>

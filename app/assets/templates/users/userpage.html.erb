@@ -1,0 +1,136 @@
+                 
+<div class="row">
+ <div class="col-sm-5">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <img ng-src="{{user.user.avatar_url}}" alt="Avatar" class="center_img avatar">
+          </br>
+          <div class="center" ng-show="current_user.id == user.user.id">
+	          <button ngf-accept="'image/*'" ngf-select ng-model="avatar" class="close center font16">Upload avatar</button>		
+	          <div ng-show="avatar && avatar.progress != 100">    
+				<div class="center">
+					<div class="progress progr">
+					  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: {{avatar.progress}}%">
+					    <span class="sr-only">{{avatar.progress}}</span>
+					  </div>
+					</div>	
+				</div>
+			  </div>
+		  </div>
+          <div class="center" ng-show="relations!='self'">
+          	<c ng-show="relations=='subscriber'">{{user.user.first_name}} is subscribed to you.</br></c>
+          	<button ng-show="relations=='subscriber'" class="button button-raised button-primary button-pill button-small" ng-click="addFriend(current_user.id, user)">Receive request</button>
+          	<c ng-show="relations=='leader'">You are subscribed to {{user.user.first_name}}.</br></c>
+          	<button ng-show="relations=='leader'" class="button button-raised button-primary button-pill button-small" ng-click="unsubscribe(current_user.id, user)">Unsubscribe</button>
+          	<c ng-show="relations=='friend'">{{user.user.first_name}} is your friend.</br></c>
+          	<button ng-show="relations=='friend'" class="button button-raised button-primary button-pill button-small" ng-click="deleteFriend(current_user.id, user)">Remove from friends</button>
+          	<button ng-show="relations=='none'" class="button button-raised button-primary button-pill button-small" ng-click="addFriend(current_user.id, user)">Add to friends</button>
+          	<br><br>
+            <button class="button button-raised button-primary button-pill button-small" data-toggle="modal" data-target="#sendMessage">Send message</button>                         
+          </div>
+        </div>
+      </div>
+
+   
+      <div class="panel panel-default" ng-show="number_of_friends!=0 || number_of_friendship_requests!=0">
+        <div class="panel-heading">
+        	<h4 class="pull_left clearfix">
+        		<a ng-href="/app/id{{user.user.id}}/friends">Friends&nbsp;</a>{{number_of_friends}}
+        	</h4>
+    		<a class="pull_right" ng-show="number_of_friendship_requests && current_user.id == user.user.id" ng-href='/app/id{{user.user.id}}/new_subscribers'>
+    			<span class="badge">{{number_of_friendship_requests}}&nbsp;new</span>
+    		</a>
+        </div>
+          <div class="panel-body">
+            <a ng-href="/app/id{{friend.user.id}}" ng-repeat="friend in random_friends" class="friend_preview inline">
+            	<div class="friend_pic_frame">
+	          		<img ng-src="{{friend.user.avatar_url}}" class="thumb_img_preview"/>
+	            </div>
+	          		{{friend.user.first_name}}<br>{{friend.user.last_name}}
+          	</a>
+          </div>
+      </div>
+   
+   
+      <div class="panel panel-default" ng-show="last_pictures.length || current_user.id == user.user.id">
+         <div class="panel-heading"><h4><a ng-href="/app/id{{user.user.id}}/pictures">Pictures</a></h4></div>
+          <div class="panel-body">
+          	<div ng-repeat="picture in last_pictures" class="thumb_div_preview">
+          		<a ng-click="openLightboxModal($index)">
+          			<img ng-src="{{picture.picture.picture.thumb_url}}" class="thumb_img_preview"/>
+          		</a>
+          	</div>
+            <c ng-hide="last_pictures.length" class="center">No pictures uploaded.</c>
+          </div>
+      </div>
+   
+      <div class="panel panel-default" ng-show="last_songs.length || current_user.id == user.user.id">
+        <div class="panel-heading"><h4><a ng-href="/app/id{{user.user.id}}/audio">Audio files</a></h4></div>
+       	<div class="panel-body">
+       		<div ng-repeat="song in last_songs">
+       			<div class="song_preview">
+       				{{ song.song.title || "title" }} - {{ song.song.performer || "performer" }}
+       			</div>
+       			<div ng-bind-html="audio_tag(song.song.url)"></div>
+       		</div>
+            <c ng-hide="last_songs.length" class="center">No songs uploaded.</c>
+        </div>
+      </div>
+      
+      <div class="panel panel-default" ng-show="last_videos.length || current_user.id == user.user.id">
+        <div class="panel-heading"><h4><a ng-href="/app/id{{user.user.id}}/video">Video</a></h4></div>
+       	<div class="panel-body">
+       		<div class="inline" ng-repeat="video in last_videos">
+       			<div ng-bind-html="small_video_tag(video.video.url)"></div>
+       		</div>
+            <c ng-hide="last_videos.length" class="center">No videos uploaded.</c>
+       	</div>
+      </div>
+   		
+   
+  </div>
+  <div class="col-sm-7">
+ 	  <div class="panel panel-default">
+        <div class="panel-body">
+      	  <p class="lead">{{user.user.first_name}}&nbsp;{{user.user.last_name}}</p>
+  	      <a ng-href="/app/edit_profile" class="close glyphicon glyphicon-pencil" ng-show="current_user.id == user.user.id"></a>
+		  E-mail: {{user.user.email}}<br>
+          <c ng-show="user.user.birth_date">Birth date: {{user.user.birth_date | date}}</c>
+        </div>
+     </div>
+   	<div class="well" ng-show="current_user.id == user.user.id"> 
+       <form class="form-horizontal" role="form" ng-submit="addPost()">
+        <h4>What's New</h4>
+         <div class="form-group" style="padding:14px;">
+          <textarea class="form-control" placeholder="Update your status" ng-model="content"></textarea>
+         </div>
+        <button class="btn btn-primary pull-right" type="submit">Post</button>
+        <ul class="list-inline"
+			<li><a href=""><i class="glyphicon glyphicon-upload"></i></a></li>
+			<li><a href=""><i class="glyphicon glyphicon-camera"></i></a></li>
+			<li><a href=""><i class="glyphicon glyphicon-map-marker"></i></a></li>
+		</ul>
+      </form>
+    </div>
+   	<div ng-show = "posts.length == 0"><h4 align = center>No posts</h4></div>
+	<div ng-repeat="post in posts | orderBy: '-post.post.updated_at'">
+		<post-panel post=post></post-panel>
+    </div>
+ </div>
+</div>
+    
+  <hr>
+  
+<div id="sendMessage" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+  	<button type="button" class="close white" data-dismiss="modal">&times;</button>
+    <div class="panel panel-default">
+        <div class="panel-body">
+        	<div class="form-group" style="padding:14px;">
+              <textarea class="form-control" placeholder="Message ..." ng-model="message"></textarea>
+             </div>
+             <button ng-click="sendMessage()">Send</button>
+        </div>
+    </div>
+  </div>
+</div>

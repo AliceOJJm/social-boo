@@ -1,0 +1,30 @@
+<div ng-show="user.id == user_id">
+	<div class="button center_button" ngf-select ng-model="files">Upload image</div>
+	<h5 align="center">or</h5>
+	<div ngf-drop ng-model="files" class="drop-box" 
+	     ngf-drag-over-class="dragover" ngf-multiple="true" ngf-allow-dir="true"
+	     ngf-accept="'image/*'"><h4>Drop images here</h4>
+	</div>
+	<div ngf-no-file-drop>File Drag/Drop is not supported for this browser</div>
+</div>
+<div ng-show="files[0]" class="center">    
+	<div ng-repeat="file in files" class="load">
+		<div class="div_preview_uploading">
+			<img ngf-src="file" ngf-accept="'image/*'" class="img_preview" />
+		</div>
+		<div class="progress progr">
+		  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: {{file.progress}}%">
+		    <span class="sr-only">{{file.progress}}</span>
+		  </div>
+		</div>
+	</div>
+</div>
+
+<div class="center">
+	<br>
+    <div ng-repeat="picture in pictures" class="div_preview">	
+		<a ng-click="openLightboxModal($index)">
+			<img ng-src="{{picture.picture.picture.medium_url}}" alt="Picture" class="img_preview"/>           
+        </a>
+    </div>
+</div>

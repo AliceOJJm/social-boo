@@ -1,0 +1,65 @@
+<div ng-show="user.id == user_id">
+    <div class="button center_button" ngf-select ng-model="files">Upload song</div>
+    <h5 align="center">or</h5>
+    <div ngf-drop ng-model="files" class="drop-box" 
+         ngf-drag-over-class="dragover" ngf-multiple="true" ngf-allow-dir="true"
+         ngf-accept="'audio/*'"><h4>Drop songs here</h4>
+    </div>
+    <div ngf-no-file-drop>File Drag/Drop is not supported for this browser</div>
+</div>
+<div ng-show="files[0]" class="center">    
+	<div ng-repeat="file in files">
+		<audio controls ngf-src="file" ngf-accept="'audio/*'"></audio>
+		<div class="progress progr" style="width: 29%" class="center">
+		  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: {{file.progress}}%">
+		    <span class="sr-only">{{file.progress}}</span>
+		  </div>
+		</div>
+	</div>
+</div>
+<div ng-show="songs.length" class="player-center">  
+
+	<div id="jquery_jplayer_1" class="jp-jplayer" style="display:none;"></div>
+	<div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
+	  	<div class="jp-type-playlist">
+			<div class="jp-gui jp-interface">
+				<div class="jp-controls">
+					<button class="jp-previous" role="button" tabindex="0">previous</button>
+					<button class="jp-play" role="button" tabindex="0">play</button>
+					<button class="jp-pause" role="button" tabindex="0">pause</button>
+					<button class="jp-next" role="button" tabindex="0">next</button>
+					<button class="jp-stop" role="button" tabindex="0">stop</button>
+				</div>
+				<div class="jp-progress">
+					<div class="jp-seek-bar">
+						<div class="jp-play-bar"></div>
+					</div>
+				</div>
+				<div class="jp-volume-controls">
+					<button class="jp-mute" role="button" tabindex="0">mute</button>
+					<button class="jp-volume-max" role="button" tabindex="0">max volume</button>
+					<div class="jp-volume-bar">
+						<div class="jp-volume-bar-value"></div>
+					</div>
+				</div>
+				<div class="jp-time-holder">
+					<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+					<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+				</div>
+				<div class="jp-toggles">
+					<button class="jp-repeat" role="button" tabindex="0">repeat</button>
+					<button class="jp-shuffle" role="button" tabindex="0">shuffle</button>
+				</div>
+			</div>
+			<div class="jp-playlist">
+				<ul>
+					<li>&nbsp;</li>
+				</ul>
+			</div>
+			<div class="jp-no-solution">
+				<span>Update Required</span>
+				To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+			</div>
+		</div>
+	</div>
+</div>

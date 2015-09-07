@@ -1,0 +1,15 @@
+<div class="center">
+	<div class="panel panel-default">
+	    <div class="panel-body">
+	  	  Name: </br><c class="lead">
+	  	  	<a editable-text="current_user.first_name" onaftersave="updateUser(current_user)">{{current_user.first_name}}</a>
+	  	  	&nbsp;
+	  	  	<a editable-text="current_user.last_name" onaftersave="updateUser(current_user)">{{current_user.last_name}}</a></br></c>
+	      <c>E-mail: <a editable-text="current_user.email" onaftersave="updateUser(current_user)">{{current_user.email}}</a></br></c>
+	      <c>Birth date: <a id="bd" data-type="date" onaftersave="updateUser(current_user)">{{(current_user.birth_date | date) || "Edit..."}}</a></c>
+	      <a editable-bsdate="current_user.birth_date" e-datepicker-popup="dd-MMMM-yyyy">
+		    {{ (current_user.birth_date | date:"dd/MM/yyyy") || 'Edit...' }}
+		  </a>
+	    </div>
+	 </div>
+ </div>

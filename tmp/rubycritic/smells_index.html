@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RubyCritic</title>
+    <link href="assets/stylesheets/application.css" media="screen, projection, print" rel="stylesheet" type="text/css">
+    <link href="assets/stylesheets/prettify.custom_theme.css" media="screen, projection, print" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header class="project-header group">
+      <div class="container">
+        <h1 class="logo"><a href="overview.html" class="logo-link">RubyCritic</a></h1>
+        <nav class="project-nav">
+          <a href="overview.html" class="project-nav-item">Overview</a>
+          <a href="code_index.html" class="project-nav-item">Code</a>
+          <a href="smells_index.html" class="project-nav-item">Smells</a>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <table id="js-index-table" class="smells-index-table index-table sortable-table">
+<thead>
+  <tr>
+    <th>Smell</th>
+    <th>Locations</th>
+    
+      <th class="centered-cell" title="Code smells introduced recently are marked as new. There's still time before they are committed!">Status</th>
+    
+  </tr>
+</thead>
+<tbody>
+  
+    <tr>
+      <td>DuplicateCode</td>
+      <td>
+        
+          <a href="spec/controllers/posts_controller_spec.html#L47">PostsControllerSpec</a>
+        
+          <a href="spec/controllers/posts_controller_spec.html#L62">PostsControllerSpec</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>DuplicateCode</td>
+      <td>
+        
+          <a href="spec/controllers/posts_controller_spec.html#L116">PostsControllerSpec</a>
+        
+          <a href="spec/controllers/posts_controller_spec.html#L130">PostsControllerSpec</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>PrimaDonnaMethod</td>
+      <td>
+        
+          <a href="app/models/user.html#L1">User</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>PrimaDonnaMethod</td>
+      <td>
+        
+          <a href="app/models/user.html#L1">User</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>DuplicateCode</td>
+      <td>
+        
+          <a href="app/controllers/pictures_controller.html#L4">PicturesController</a>
+        
+          <a href="app/controllers/posts_controller.html#L5">PostsController</a>
+        
+          <a href="app/controllers/songs_controller.html#L4">SongsController</a>
+        
+          <a href="app/controllers/videos_controller.html#L4">VideosController</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>DuplicateCode</td>
+      <td>
+        
+          <a href="app/controllers/pictures_controller.html#L24">PicturesController</a>
+        
+          <a href="app/controllers/songs_controller.html#L38">SongsController</a>
+        
+          <a href="app/controllers/videos_controller.html#L32">VideosController</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>FeatureEnvy</td>
+      <td>
+        
+          <a href="app/controllers/songs_controller.html#L12">SongsController</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>DuplicateMethodCall</td>
+      <td>
+        
+          <a href="app/controllers/pictures_controller.html#L14">PicturesController</a>
+        
+          <a href="app/controllers/pictures_controller.html#L15">PicturesController</a>
+        
+          <a href="app/controllers/pictures_controller.html#L16">PicturesController</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>FeatureEnvy</td>
+      <td>
+        
+          <a href="app/controllers/pictures_controller.html#L12">PicturesController</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>HighComplexity</td>
+      <td>
+        
+          <a href="app/controllers/users_controller.html#L12">UsersController</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>HighComplexity</td>
+      <td>
+        
+          <a href="app/controllers/friends_controller.html#L3">FriendsController</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>UncommunicativeVariableName</td>
+      <td>
+        
+          <a href="db/migrate/20150703121604_create_videos.html#L3">CreateVideos</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>FeatureEnvy</td>
+      <td>
+        
+          <a href="db/migrate/20150703121604_create_videos.html#L2">CreateVideos</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>DuplicateCode</td>
+      <td>
+        
+          <a href="db/migrate/20150606154954_create_subscriptions.html#L2">CreateSubscriptions</a>
+        
+          <a href="db/migrate/20150606165958_create_friendships.html#L2">CreateFriendships</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>UncommunicativeVariableName</td>
+      <td>
+        
+          <a href="db/migrate/20150606165958_create_friendships.html#L3">CreateFriendships</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>FeatureEnvy</td>
+      <td>
+        
+          <a href="db/migrate/20150606165958_create_friendships.html#L2">CreateFriendships</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>UncommunicativeVariableName</td>
+      <td>
+        
+          <a href="db/migrate/20150712195410_add_confirmable_to_devise.html#L3">AddConfirmableToDevise</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>FeatureEnvy</td>
+      <td>
+        
+          <a href="db/migrate/20150712195410_add_confirmable_to_devise.html#L2">AddConfirmableToDevise</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>UncommunicativeVariableName</td>
+      <td>
+        
+          <a href="db/migrate/20150705185004_create_communities.html#L3">CreateCommunities</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>FeatureEnvy</td>
+      <td>
+        
+          <a href="db/migrate/20150705185004_create_communities.html#L2">CreateCommunities</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>UncommunicativeVariableName</td>
+      <td>
+        
+          <a href="db/migrate/20150607030828_create_posts.html#L3">CreatePosts</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>FeatureEnvy</td>
+      <td>
+        
+          <a href="db/migrate/20150607030828_create_posts.html#L2">CreatePosts</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>UncommunicativeModuleName</td>
+      <td>
+        
+          <a href="db/migrate/20150712200015_add_confirmable_to_devise_v1.html#L1">AddConfirmableToDeviseV1</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>UncommunicativeVariableName</td>
+      <td>
+        
+          <a href="db/migrate/20150606154954_create_subscriptions.html#L3">CreateSubscriptions</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>FeatureEnvy</td>
+      <td>
+        
+          <a href="db/migrate/20150606154954_create_subscriptions.html#L2">CreateSubscriptions</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>UncommunicativeVariableName</td>
+      <td>
+        
+          <a href="db/migrate/20150604101814_create_users_roles.html#L3">CreateUsersRoles</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>FeatureEnvy</td>
+      <td>
+        
+          <a href="db/migrate/20150604101814_create_users_roles.html#L2">CreateUsersRoles</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>UncommunicativeVariableName</td>
+      <td>
+        
+          <a href="db/migrate/20150702212825_create_pictures.html#L3">CreatePictures</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>FeatureEnvy</td>
+      <td>
+        
+          <a href="db/migrate/20150702212825_create_pictures.html#L2">CreatePictures</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>UncommunicativeVariableName</td>
+      <td>
+        
+          <a href="db/migrate/20150616163309_create_messages.html#L3">CreateMessages</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>FeatureEnvy</td>
+      <td>
+        
+          <a href="db/migrate/20150616163309_create_messages.html#L2">CreateMessages</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>UncommunicativeVariableName</td>
+      <td>
+        
+          <a href="db/migrate/20150712075054_create_dialogues.html#L3">CreateDialogues</a>
+        
+          <a href="db/migrate/20150712075054_create_dialogues.html#L7">CreateDialogues</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>FeatureEnvy</td>
+      <td>
+        
+          <a href="db/migrate/20150712075054_create_dialogues.html#L2">CreateDialogues</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>UncommunicativeVariableName</td>
+      <td>
+        
+          <a href="db/migrate/20150604101808_create_roles.html#L3">CreateRoles</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>FeatureEnvy</td>
+      <td>
+        
+          <a href="db/migrate/20150604101808_create_roles.html#L2">CreateRoles</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>UncommunicativeVariableName</td>
+      <td>
+        
+          <a href="db/migrate/20150703121520_create_songs.html#L3">CreateSongs</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>FeatureEnvy</td>
+      <td>
+        
+          <a href="db/migrate/20150703121520_create_songs.html#L2">CreateSongs</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>UncommunicativeVariableName</td>
+      <td>
+        
+          <a href="db/migrate/20150604101701_devise_create_users.html#L3">DeviseCreateUsers</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>FeatureEnvy</td>
+      <td>
+        
+          <a href="db/migrate/20150604101701_devise_create_users.html#L2">DeviseCreateUsers</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>DuplicateCode</td>
+      <td>
+        
+          <a href="db/schema.html#L24">Schema</a>
+        
+          <a href="db/schema.html#L84">Schema</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>DuplicateCode</td>
+      <td>
+        
+          <a href="db/schema.html#L38">Schema</a>
+        
+          <a href="db/schema.html#L75">Schema</a>
+        
+          <a href="db/schema.html#L146">Schema</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+    <tr>
+      <td>HighComplexity</td>
+      <td>
+        
+          <a href="db/schema.html#L115">Schema</a>
+        
+      </td>
+      
+        <td class="centered-cell"><span class="status-old circled-text circle">old</span></td>
+      
+    </tr>
+  
+</tbody>
+</table>
+
+    </div>
+    <script src='assets/javascripts/jquery-2.1.0.js'></script>
+    <script src='assets/javascripts/jquery.tablesorter.js'></script>
+    <script src='assets/javascripts/jquery.floatThead-v1.2.7.js'></script>
+    <script src='assets/javascripts/jquery.timeago-v1.4.1.js'></script>
+    <script src='assets/javascripts/highcharts.src-4.0.1.js'></script>
+    <script src='assets/javascripts/jquery.scrollTo-1.4.11.js'></script>
+    <script src='assets/javascripts/prettify-4-Mar-2013.js'></script>
+    <script src='assets/javascripts/application.js'></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<ul class="nav nav-tabs">
+  <li><a ng-href="/app/id{{user.id}}/friends">Friends</a></li>
+  <li><a ng-href="/app/id{{user.id}}/subscribers">Subscribers</a></li>
+  <li><a ng-href="/app/id{{user.id}}/new_subscribers"  ng-show = "user.id == current_user.id">New subscribers</a></li>
+  <li><a ng-href="/app/id{{user.id}}/subscriptions">Subscriptions</a></li>
+</ul>
+<div ng-show = "subscriptions.length == 0">
+	<h4 align = center ng-show = "user.id == current_user.id">You are not subscribed to anyone</h4>
+	<h4 align = center ng-show = "user.id != current_user.id">{{user.first_name}} is not subscribed to anyone.</h4>
+</div>
+<div ng-repeat="leader in subscriptions">
+	<div class="panel panel-default">
+	  <div class="panel-body">
+		  <div class="col-md-4">
+			<user-panel user=leader.user></user-panel>
+		  </div>
+		  <div class="col-md-4" ng-show="current_user.id == user.id">
+		  	<button class="button button-raised button-primary button-pill button-small" ng-click="unsubscribe(current_user.id, leader)">Unsubscribe</button>
+		  </div>                           
+	  </div>
+	</div>
+</div>

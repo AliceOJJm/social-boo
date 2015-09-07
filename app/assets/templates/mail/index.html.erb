@@ -1,0 +1,46 @@
+<div class="container center">
+    <div class="row">
+            <div class="panel panel-primary">
+                <div class="panel-heading" id="accordion">
+                    <h5><span class="glyphicon glyphicon-comment"></span>&nbsp;Dialogues</h5>
+                </div>
+                <div class="d_panel-body">
+                    <ul class="d_chat">
+                    	<h5 class="text-muted" ng-show="!dialogues.length">The mail history will be displayed here.</h5>
+                    	<div ng-repeat="dialogue in dialogues">
+                    		<a ng-href="/app/mail/dialogue{{dialogue.dialogue.dialogue.id}}">
+	                        <li class="left clearfix">
+	                        	<span class="chat-img pull-left">
+	                        		<div ng-repeat="user in dialogue.users">
+	                            		<img ng-show="user.user.id!=current_user.id" ng-src="{{user.user.avatar_url}}" alt="User Avatar" width="50px" />
+	                            	</div>
+	                        	</span>
+	                            <div class="chat-body clearfix">
+	                                <div class="header">
+	                                    <strong class="primary-font pull-left">
+	                                    	<div ng-repeat="user in dialogue.users">
+	                                    		<div ng-show="user.user.id!=current_user.id">{{user.user.first_name}}&nbsp;{{user.user.last_name}}&nbsp;</div>
+	                                    	</div>
+                                    	</strong>
+	                                </div>
+	                                <br>
+                                	<small ng-show="dialogue.last_message" class="pull-right text-muted">
+                                    	<span class="glyphicon glyphicon-time"></span>{{dialogue.last_message.content.message.created_at | date : 'MMM d, y h:mm a'}}
+                                    </small>
+	                                <div ng-show="dialogue.last_message" class="pull-left">
+	                                	<img ng-src="{{dialogue.last_message.user_pic}}" alt="User Avatar" class="avatar_thumb"/>
+	                                	{{dialogue.last_message.user_name}}<br>
+	                                	{{dialogue.last_message.content.message.text}}
+	                                </div>
+	                                <h5 align="center" ng-show="!dialogue.last_message">Message history is empty.</h5>
+	                            </div>
+	                        </li>
+	                        </a>
+	                    </div>
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                </div>
+            </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<ul class="nav nav-tabs">
+  <li><a ng-href="/app/id{{current_user.id}}/communities">My communities</a></li>
+  <li><a ng-href="/app/communities">All</a></li>
+</ul>
+<div class="well" ng-show="showForm"> 
+   <form class="form-horizontal" role="form" ng-submit="createCommunity()">
+    <h4>Community title</h4>
+     <div class="form-group" style="padding:14px;">
+      <input class="form-control" type="text" ng-model="title" required></input>
+     </div>
+    <button class="btn btn-primary pull-right" type="submit">Create!</button>
+    <br>
+  </form>
+</div>
+<div ng-repeat="community in communities">
+	<a ng-href="/app/communities/{{community.community.community.id}}">
+		{{community.community.community.title}}
+		{{community.participants}}
+	</a>
+</div>

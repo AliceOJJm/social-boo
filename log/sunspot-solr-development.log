@@ -1,0 +1,835 @@
+авг 30, 2015 4:48:25 PM org.apache.solr.servlet.SolrDispatchFilter init
+INFO: SolrDispatchFilter.init()
+авг 30, 2015 4:48:25 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+INFO: JNDI not configured for solr (NoInitialContextEx)
+авг 30, 2015 4:48:25 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+INFO: using system property solr.solr.home: /home/elizaveta/boo/solr
+авг 30, 2015 4:48:25 PM org.apache.solr.core.CoreContainer$Initializer initialize
+INFO: looking for solr.xml: /home/elizaveta/boo/solr/solr.xml
+авг 30, 2015 4:48:25 PM org.apache.solr.core.CoreContainer <init>
+INFO: New CoreContainer 1346370750
+авг 30, 2015 4:48:25 PM org.apache.solr.core.CoreContainer load
+INFO: Loading CoreContainer using Solr Home: '/home/elizaveta/boo/solr/'
+авг 30, 2015 4:48:25 PM org.apache.solr.core.SolrResourceLoader <init>
+INFO: new SolrResourceLoader for directory: '/home/elizaveta/boo/solr/'
+авг 30, 2015 4:48:26 PM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+INFO: Setting socketTimeout to: 0
+авг 30, 2015 4:48:26 PM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+INFO: Setting urlScheme to: http://
+авг 30, 2015 4:48:26 PM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+INFO: Setting connTimeout to: 0
+авг 30, 2015 4:48:26 PM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+INFO: Setting maxConnectionsPerHost to: 20
+авг 30, 2015 4:48:26 PM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+INFO: Setting corePoolSize to: 0
+авг 30, 2015 4:48:26 PM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+INFO: Setting maximumPoolSize to: 2147483647
+авг 30, 2015 4:48:26 PM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+INFO: Setting maxThreadIdleTime to: 5
+авг 30, 2015 4:48:26 PM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+INFO: Setting sizeOfQueue to: -1
+авг 30, 2015 4:48:26 PM org.apache.solr.handler.component.HttpShardHandlerFactory getParameter
+INFO: Setting fairnessPolicy to: false
+авг 30, 2015 4:48:26 PM org.apache.solr.client.solrj.impl.HttpClientUtil createClient
+INFO: Creating new http client, config:maxConnectionsPerHost=20&maxConnections=10000&socketTimeout=0&connTimeout=0&retry=false
+авг 30, 2015 4:48:26 PM org.apache.solr.core.CoreContainer load
+INFO: Registering Log Listener
+авг 30, 2015 4:48:26 PM org.apache.solr.core.CoreContainer create
+INFO: Creating SolrCore 'default' using instanceDir: /home/elizaveta/boo/solr/.
+авг 30, 2015 4:48:26 PM org.apache.solr.core.CoreContainer create
+INFO: Creating SolrCore 'development' using instanceDir: /home/elizaveta/boo/solr/.
+авг 30, 2015 4:48:26 PM org.apache.solr.core.SolrResourceLoader <init>
+INFO: new SolrResourceLoader for directory: '/home/elizaveta/boo/solr/./'
+авг 30, 2015 4:48:26 PM org.apache.solr.core.CoreContainer create
+INFO: Creating SolrCore 'test' using instanceDir: /home/elizaveta/boo/solr/.
+авг 30, 2015 4:48:26 PM org.apache.solr.core.SolrResourceLoader <init>
+INFO: new SolrResourceLoader for directory: '/home/elizaveta/boo/solr/./'
+авг 30, 2015 4:48:26 PM org.apache.solr.core.SolrResourceLoader <init>
+INFO: new SolrResourceLoader for directory: '/home/elizaveta/boo/solr/./'
+авг 30, 2015 4:48:27 PM org.apache.solr.core.SolrConfig <init>
+INFO: Using Lucene MatchVersion: LUCENE_41
+авг 30, 2015 4:48:27 PM org.apache.solr.core.SolrConfig <init>
+INFO: Using Lucene MatchVersion: LUCENE_41
+авг 30, 2015 4:48:27 PM org.apache.solr.core.SolrConfig <init>
+INFO: Using Lucene MatchVersion: LUCENE_41
+авг 30, 2015 4:48:27 PM org.apache.solr.core.SolrConfig <init>
+INFO: Loaded SolrConfig: solrconfig.xml
+авг 30, 2015 4:48:27 PM org.apache.solr.core.SolrConfig <init>
+INFO: Loaded SolrConfig: solrconfig.xml
+авг 30, 2015 4:48:27 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: Reading Solr Schema
+авг 30, 2015 4:48:27 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: Reading Solr Schema
+авг 30, 2015 4:48:27 PM org.apache.solr.core.SolrConfig <init>
+INFO: Loaded SolrConfig: solrconfig.xml
+авг 30, 2015 4:48:27 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: Reading Solr Schema
+авг 30, 2015 4:48:27 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: Schema name=sunspot
+авг 30, 2015 4:48:27 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: Schema name=sunspot
+авг 30, 2015 4:48:27 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: Schema name=sunspot
+авг 30, 2015 4:48:27 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: default search field in schema is text
+авг 30, 2015 4:48:27 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: default search field in schema is text
+авг 30, 2015 4:48:27 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: query parser default operator is AND
+авг 30, 2015 4:48:27 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: query parser default operator is AND
+авг 30, 2015 4:48:27 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: unique key field: id
+авг 30, 2015 4:48:27 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: unique key field: id
+авг 30, 2015 4:48:27 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: default search field in schema is text
+авг 30, 2015 4:48:27 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: query parser default operator is AND
+авг 30, 2015 4:48:27 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: unique key field: id
+авг 30, 2015 4:48:27 PM org.apache.solr.core.SolrCore <init>
+INFO: [development] Opening new SolrCore at /home/elizaveta/boo/solr/./, dataDir=/home/elizaveta/boo/solr/./development/data/
+авг 30, 2015 4:48:27 PM org.apache.solr.core.SolrCore <init>
+INFO: [default] Opening new SolrCore at /home/elizaveta/boo/solr/./, dataDir=/home/elizaveta/boo/solr/./default/data/
+авг 30, 2015 4:48:27 PM org.apache.solr.core.SolrCore <init>
+INFO: [test] Opening new SolrCore at /home/elizaveta/boo/solr/./, dataDir=/home/elizaveta/boo/solr/./test/data/
+авг 30, 2015 4:48:27 PM org.apache.solr.core.SolrCore <init>
+INFO: JMX monitoring not detected for core: development
+авг 30, 2015 4:48:27 PM org.apache.solr.core.SolrCore <init>
+INFO: JMX monitoring not detected for core: default
+авг 30, 2015 4:48:27 PM org.apache.solr.core.SolrCore <init>
+INFO: JMX monitoring not detected for core: test
+авг 30, 2015 4:48:27 PM org.apache.solr.core.SolrCore initDirectoryFactory
+INFO: solr.NRTCachingDirectoryFactory
+авг 30, 2015 4:48:27 PM org.apache.solr.core.SolrCore initDirectoryFactory
+INFO: solr.NRTCachingDirectoryFactory
+авг 30, 2015 4:48:27 PM org.apache.solr.core.SolrCore initDirectoryFactory
+INFO: solr.NRTCachingDirectoryFactory
+авг 30, 2015 4:48:27 PM org.apache.solr.core.CachingDirectoryFactory get
+INFO: return new directory for /home/elizaveta/boo/solr/./development/data forceNew: false
+авг 30, 2015 4:48:27 PM org.apache.solr.core.CachingDirectoryFactory get
+INFO: return new directory for /home/elizaveta/boo/solr/./test/data forceNew: false
+авг 30, 2015 4:48:27 PM org.apache.solr.core.CachingDirectoryFactory get
+INFO: return new directory for /home/elizaveta/boo/solr/./default/data forceNew: false
+авг 30, 2015 4:48:27 PM org.apache.solr.core.SolrCore getNewIndexDir
+INFO: New index directory detected: old=null new=/home/elizaveta/boo/solr/./test/data/index/
+авг 30, 2015 4:48:27 PM org.apache.solr.core.SolrCore getNewIndexDir
+INFO: New index directory detected: old=null new=/home/elizaveta/boo/solr/./development/data/index/
+авг 30, 2015 4:48:27 PM org.apache.solr.core.CachingDirectoryFactory get
+INFO: return new directory for /home/elizaveta/boo/solr/./test/data/index forceNew: false
+авг 30, 2015 4:48:27 PM org.apache.solr.core.SolrCore getNewIndexDir
+INFO: New index directory detected: old=null new=/home/elizaveta/boo/solr/./default/data/index/
+авг 30, 2015 4:48:27 PM org.apache.solr.core.CachingDirectoryFactory get
+INFO: return new directory for /home/elizaveta/boo/solr/./development/data/index forceNew: false
+авг 30, 2015 4:48:27 PM org.apache.solr.core.CachingDirectoryFactory get
+INFO: return new directory for /home/elizaveta/boo/solr/./default/data/index forceNew: false
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /select: solr.SearchHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /query: solr.SearchHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /select: solr.SearchHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /select: solr.SearchHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /query: solr.SearchHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /get: solr.RealTimeGetHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /query: solr.SearchHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /get: solr.RealTimeGetHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /get: solr.RealTimeGetHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /update: solr.UpdateRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /update: solr.UpdateRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /update/json: solr.JsonUpdateRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /update: solr.UpdateRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /update/json: solr.JsonUpdateRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /update/json: solr.JsonUpdateRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /update/csv: solr.CSVRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /update/csv: solr.CSVRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /update/csv: solr.CSVRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: adding lazy requestHandler: solr.extraction.ExtractingRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: adding lazy requestHandler: solr.extraction.ExtractingRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /update/extract: solr.extraction.ExtractingRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: adding lazy requestHandler: solr.extraction.ExtractingRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: adding lazy requestHandler: solr.FieldAnalysisRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /update/extract: solr.extraction.ExtractingRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /analysis/field: solr.FieldAnalysisRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /update/extract: solr.extraction.ExtractingRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: adding lazy requestHandler: solr.DocumentAnalysisRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /analysis/document: solr.DocumentAnalysisRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: adding lazy requestHandler: solr.FieldAnalysisRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /analysis/field: solr.FieldAnalysisRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: adding lazy requestHandler: solr.DocumentAnalysisRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /analysis/document: solr.DocumentAnalysisRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /admin/ping: solr.PingRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /debug/dump: solr.DumpRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: adding lazy requestHandler: solr.FieldAnalysisRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /admin/ping: solr.PingRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /analysis/field: solr.FieldAnalysisRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /debug/dump: solr.DumpRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: adding lazy requestHandler: solr.DocumentAnalysisRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /analysis/document: solr.DocumentAnalysisRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /admin/ping: solr.PingRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /debug/dump: solr.DumpRequestHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /replication: solr.ReplicationHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /replication: solr.ReplicationHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /replication: solr.ReplicationHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /mlt: solr.MoreLikeThisHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /mlt: solr.MoreLikeThisHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /mlt: solr.MoreLikeThisHandler
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /admin/: solr.admin.AdminHandlers
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /admin/: solr.admin.AdminHandlers
+авг 30, 2015 4:48:27 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /admin/: solr.admin.AdminHandlers
+авг 30, 2015 4:48:27 PM org.apache.solr.handler.loader.XMLLoader init
+INFO: xsltCacheLifetimeSeconds=60
+авг 30, 2015 4:48:27 PM org.apache.solr.handler.loader.XMLLoader init
+INFO: xsltCacheLifetimeSeconds=60
+авг 30, 2015 4:48:27 PM org.apache.solr.handler.loader.XMLLoader init
+INFO: xsltCacheLifetimeSeconds=60
+авг 30, 2015 4:48:27 PM org.apache.solr.handler.loader.XMLLoader init
+INFO: xsltCacheLifetimeSeconds=60
+авг 30, 2015 4:48:27 PM org.apache.solr.handler.loader.XMLLoader init
+INFO: xsltCacheLifetimeSeconds=60
+авг 30, 2015 4:48:27 PM org.apache.solr.handler.loader.XMLLoader init
+INFO: xsltCacheLifetimeSeconds=60
+авг 30, 2015 4:48:27 PM org.apache.solr.handler.loader.XMLLoader init
+INFO: xsltCacheLifetimeSeconds=60
+авг 30, 2015 4:48:27 PM org.apache.solr.handler.loader.XMLLoader init
+INFO: xsltCacheLifetimeSeconds=60
+авг 30, 2015 4:48:27 PM org.apache.solr.handler.loader.XMLLoader init
+INFO: xsltCacheLifetimeSeconds=60
+авг 30, 2015 4:48:27 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@2bc9ff2 main
+авг 30, 2015 4:48:27 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@1ccb457c main
+авг 30, 2015 4:48:27 PM org.apache.solr.update.CommitTracker <init>
+INFO: Hard AutoCommit: if uncommited for 15000ms; 
+авг 30, 2015 4:48:27 PM org.apache.solr.update.CommitTracker <init>
+INFO: Soft AutoCommit: if uncommited for 5000ms; 
+авг 30, 2015 4:48:27 PM org.apache.solr.handler.component.SpellCheckComponent inform
+INFO: Initializing spell checkers
+авг 30, 2015 4:48:27 PM org.apache.solr.update.CommitTracker <init>
+INFO: Hard AutoCommit: if uncommited for 15000ms; 
+авг 30, 2015 4:48:27 PM org.apache.solr.update.CommitTracker <init>
+INFO: Soft AutoCommit: if uncommited for 5000ms; 
+авг 30, 2015 4:48:27 PM org.apache.solr.handler.component.SpellCheckComponent inform
+INFO: Initializing spell checkers
+авг 30, 2015 4:48:27 PM org.apache.solr.spelling.DirectSolrSpellChecker init
+INFO: init: {name=default,field=name,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+авг 30, 2015 4:48:27 PM org.apache.solr.spelling.DirectSolrSpellChecker init
+INFO: init: {name=default,field=name,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+авг 30, 2015 4:48:27 PM org.apache.solr.handler.component.SpellCheckComponent inform
+INFO: No queryConverter defined, using default converter
+авг 30, 2015 4:48:27 PM org.apache.solr.handler.component.SpellCheckComponent inform
+INFO: No queryConverter defined, using default converter
+авг 30, 2015 4:48:28 PM org.apache.solr.handler.ReplicationHandler inform
+INFO: Commits will be reserved for  10000
+авг 30, 2015 4:48:28 PM org.apache.solr.handler.ReplicationHandler inform
+INFO: Commits will be reserved for  10000
+авг 30, 2015 4:48:28 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [development] Registered new searcher Searcher@1ccb457c main{StandardDirectoryReader(segments_1:1)}
+авг 30, 2015 4:48:28 PM org.apache.solr.core.CoreContainer registerCore
+INFO: registering core: development
+авг 30, 2015 4:48:28 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [test] Registered new searcher Searcher@2bc9ff2 main{StandardDirectoryReader(segments_1:1)}
+авг 30, 2015 4:48:28 PM org.apache.solr.core.CoreContainer registerCore
+INFO: registering core: test
+авг 30, 2015 4:48:28 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@64c1a771 main
+авг 30, 2015 4:48:28 PM org.apache.solr.update.CommitTracker <init>
+INFO: Hard AutoCommit: if uncommited for 15000ms; 
+авг 30, 2015 4:48:28 PM org.apache.solr.update.CommitTracker <init>
+INFO: Soft AutoCommit: if uncommited for 5000ms; 
+авг 30, 2015 4:48:28 PM org.apache.solr.handler.component.SpellCheckComponent inform
+INFO: Initializing spell checkers
+авг 30, 2015 4:48:28 PM org.apache.solr.spelling.DirectSolrSpellChecker init
+INFO: init: {name=default,field=name,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+авг 30, 2015 4:48:28 PM org.apache.solr.handler.component.SpellCheckComponent inform
+INFO: No queryConverter defined, using default converter
+авг 30, 2015 4:48:28 PM org.apache.solr.handler.ReplicationHandler inform
+INFO: Commits will be reserved for  10000
+авг 30, 2015 4:48:28 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [default] Registered new searcher Searcher@64c1a771 main{StandardDirectoryReader(segments_a7:1229 _ae(4.2):C40/1 _ag(4.2):C1)}
+авг 30, 2015 4:48:28 PM org.apache.solr.core.CoreContainer registerCore
+INFO: registering core: default
+авг 30, 2015 4:48:28 PM org.apache.solr.servlet.SolrDispatchFilter init
+INFO: user.dir=/home/elizaveta/.rvm/gems/ruby-2.2.1/gems/sunspot_solr-2.2.0/solr
+авг 30, 2015 4:48:28 PM org.apache.solr.servlet.SolrDispatchFilter init
+INFO: SolrDispatchFilter.init() done
+авг 30, 2015 4:57:27 PM org.apache.solr.core.SolrDeletionPolicy onInit
+INFO: SolrDeletionPolicy.onInit: commits:num=1
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/elizaveta/boo/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@7bf0673e; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_a7,generation=367,filenames=[_ag_Lucene41_0.pos, _ae_Lucene41_0.tim, _ae.nvd, _ag.fnm, _ag.fdt, _ag.nvm, _ae_Lucene41_0.pos, _ae.nvm, _ag.nvd, segments_a7, _ae.si, _ae_Lucene41_0.tip, _ae.fnm, _ae.fdt, _ag.fdx, _ag_Lucene41_0.doc, _ag_Lucene41_0.tim, _ag.si, _ae_1.del, _ae.fdx, _ag_Lucene41_0.tip, _ae_Lucene41_0.doc]
+авг 30, 2015 4:57:27 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 367[_ag_Lucene41_0.pos, _ae_Lucene41_0.tim, _ae.nvd, _ag.fnm, _ag.fdt, _ag.nvm, _ae_Lucene41_0.pos, _ae.nvm, _ag.nvd, segments_a7, _ae.si, _ae_Lucene41_0.tip, _ae.fnm, _ae.fdt, _ag.fdx, _ag_Lucene41_0.doc, _ag_Lucene41_0.tim, _ag.si, _ae_1.del, _ae.fdx, _ag_Lucene41_0.tip, _ae_Lucene41_0.doc]
+авг 30, 2015 4:57:27 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [default] webapp=/solr path=/update params={wt=ruby} {add=[User 1 (1510938296095604736)]} 0 1143
+авг 30, 2015 4:57:27 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+авг 30, 2015 4:57:28 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/elizaveta/boo/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@7bf0673e; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_a7,generation=367,filenames=[_ag_Lucene41_0.pos, _ae_Lucene41_0.tim, _ae.nvd, _ag.fnm, _ag.fdt, _ag.nvm, _ae_Lucene41_0.pos, _ae.nvm, _ag.nvd, segments_a7, _ae.si, _ae_Lucene41_0.tip, _ae.fnm, _ae.fdt, _ag.fdx, _ag_Lucene41_0.doc, _ag_Lucene41_0.tim, _ag.si, _ae_1.del, _ae.fdx, _ag_Lucene41_0.tip, _ae_Lucene41_0.doc]
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/elizaveta/boo/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@7bf0673e; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_a8,generation=368,filenames=[_ah_Lucene41_0.tim, _ah.nvd, _ae_Lucene41_0.tim, _ae.nvd, _ah_Lucene41_0.tip, _ah.fdx, _ah_Lucene41_0.pos, _ae_Lucene41_0.pos, _ae.nvm, _ah.nvm, segments_a8, _ah.si, _ae.si, _ae_Lucene41_0.tip, _ah_Lucene41_0.doc, _ae.fnm, _ah.fdt, _ae.fdt, _ah.fnm, _ae_1.del, _ae.fdx, _ae_Lucene41_0.doc]
+авг 30, 2015 4:57:28 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 368[_ah_Lucene41_0.tim, _ah.nvd, _ae_Lucene41_0.tim, _ae.nvd, _ah_Lucene41_0.tip, _ah.fdx, _ah_Lucene41_0.pos, _ae_Lucene41_0.pos, _ae.nvm, _ah.nvm, segments_a8, _ah.si, _ae.si, _ae_Lucene41_0.tip, _ah_Lucene41_0.doc, _ae.fnm, _ah.fdt, _ae.fdt, _ah.fnm, _ae_1.del, _ae.fdx, _ae_Lucene41_0.doc]
+авг 30, 2015 4:57:28 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@25c46e49 main
+авг 30, 2015 4:57:28 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+авг 30, 2015 4:57:28 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [default] Registered new searcher Searcher@25c46e49 main{StandardDirectoryReader(segments_a8:1233 _ae(4.2):C40/1 _ah(4.2):C1)}
+авг 30, 2015 4:57:28 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [default] webapp=/solr path=/update params={wt=ruby} {commit=} 0 817
+авг 30, 2015 4:57:38 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=77 
+авг 30, 2015 4:57:38 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=1 
+авг 30, 2015 4:57:38 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=2 
+авг 30, 2015 5:07:10 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=0 
+авг 30, 2015 5:07:10 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=0 
+авг 30, 2015 5:07:10 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=1 
+авг 30, 2015 5:07:16 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=liki&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=0 status=0 QTime=34 
+авг 30, 2015 5:07:16 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=liki&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=2 
+авг 30, 2015 5:07:16 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=liki&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=3 
+авг 30, 2015 5:07:37 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=1 
+авг 30, 2015 5:07:37 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=1 
+авг 30, 2015 5:07:37 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=0 
+авг 30, 2015 5:09:39 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=1 
+авг 30, 2015 5:09:39 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=1 
+авг 30, 2015 5:09:39 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=0 
+авг 30, 2015 5:11:05 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=1 
+авг 30, 2015 5:11:05 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=0 
+авг 30, 2015 5:11:05 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=0 
+авг 30, 2015 5:11:19 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=dsds&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=0 status=0 QTime=3 
+авг 30, 2015 5:11:19 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=dsds&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=2 
+авг 30, 2015 5:11:19 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=dsds&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=1 
+авг 30, 2015 5:16:50 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=0 
+авг 30, 2015 5:16:50 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=0 
+авг 30, 2015 5:16:50 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=0 
+авг 30, 2015 5:17:26 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=0 
+авг 30, 2015 5:17:26 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=1 
+авг 30, 2015 5:17:26 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=0 
+авг 30, 2015 5:17:53 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=0 
+авг 30, 2015 5:17:53 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=0 
+авг 30, 2015 5:17:54 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=0 
+авг 30, 2015 5:18:57 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=1 
+авг 30, 2015 5:18:57 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=1 
+авг 30, 2015 5:18:57 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=1 
+авг 30, 2015 5:21:39 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=1 
+авг 30, 2015 5:21:39 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=0 
+авг 30, 2015 5:21:39 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=1 
+авг 30, 2015 5:27:11 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=1 
+авг 30, 2015 5:27:11 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=0 
+авг 30, 2015 5:27:11 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=0 
+авг 30, 2015 5:27:13 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=dsds&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=0 status=0 QTime=1 
+авг 30, 2015 5:27:13 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=dsds&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=1 
+авг 30, 2015 5:27:13 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=dsds&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=1 
+авг 30, 2015 5:31:03 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=0 
+авг 30, 2015 5:31:03 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=0 
+авг 30, 2015 5:31:03 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=0 
+авг 30, 2015 5:31:18 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=1 
+авг 30, 2015 5:31:18 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=0 
+авг 30, 2015 5:31:18 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=1 
+авг 30, 2015 5:33:29 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [default] webapp=/solr path=/update params={wt=ruby} {add=[User 1 (1510940563875037184), User 2 (1510940563884474368), User 3 (1510940563888668672), User 4 (1510940563890765824), User 5 (1510940563892862976), User 6 (1510940563894960128)]} 0 22
+авг 30, 2015 5:33:29 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+авг 30, 2015 5:33:30 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/elizaveta/boo/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@7bf0673e; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_a8,generation=368,filenames=[_ah_Lucene41_0.tim, _ah.nvd, _ae_Lucene41_0.tim, _ae.nvd, _ah_Lucene41_0.tip, _ah.fdx, _ah_Lucene41_0.pos, _ae_Lucene41_0.pos, _ae.nvm, _ah.nvm, segments_a8, _ah.si, _ae.si, _ae_Lucene41_0.tip, _ah_Lucene41_0.doc, _ae.fnm, _ah.fdt, _ae.fdt, _ah.fnm, _ae_1.del, _ae.fdx, _ae_Lucene41_0.doc]
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/elizaveta/boo/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@7bf0673e; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_a9,generation=369,filenames=[_ai.fnm, _ai_Lucene41_0.tim, _ae_Lucene41_0.tim, _ae.nvd, _ai.fdt, _ai_Lucene41_0.tip, _ae_Lucene41_0.pos, _ae.nvm, segments_a9, _ae.si, _ae_Lucene41_0.tip, _ai.nvm, _ai.si, _ae.fnm, _ai_Lucene41_0.doc, _ae.fdt, _ai.fdx, _ai.nvd, _ae_2.del, _ae.fdx, _ai_Lucene41_0.pos, _ae_Lucene41_0.doc]
+авг 30, 2015 5:33:30 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 369[_ai.fnm, _ai_Lucene41_0.tim, _ae_Lucene41_0.tim, _ae.nvd, _ai.fdt, _ai_Lucene41_0.tip, _ae_Lucene41_0.pos, _ae.nvm, segments_a9, _ae.si, _ae_Lucene41_0.tip, _ai.nvm, _ai.si, _ae.fnm, _ai_Lucene41_0.doc, _ae.fdt, _ai.fdx, _ai.nvd, _ae_2.del, _ae.fdx, _ai_Lucene41_0.pos, _ae_Lucene41_0.doc]
+авг 30, 2015 5:33:30 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@476018c4 main
+авг 30, 2015 5:33:30 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [default] Registered new searcher Searcher@476018c4 main{StandardDirectoryReader(segments_a9:1237 _ae(4.2):C40/6 _ai(4.2):C6)}
+авг 30, 2015 5:33:30 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+авг 30, 2015 5:33:30 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [default] webapp=/solr path=/update params={wt=ruby} {commit=} 0 700
+авг 30, 2015 5:34:00 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=2 
+авг 30, 2015 5:34:00 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=1 
+авг 30, 2015 5:34:17 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [default] webapp=/solr path=/update params={wt=ruby} {add=[User 1 (1510940613800886272), User 2 (1510940613805080576), User 3 (1510940613807177728), User 4 (1510940613809274880), User 5 (1510940613811372032), User 6 (1510940613813469184)]} 0 14
+авг 30, 2015 5:34:17 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+авг 30, 2015 5:34:17 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/elizaveta/boo/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@7bf0673e; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_a9,generation=369,filenames=[_ai.fnm, _ai_Lucene41_0.tim, _ae_Lucene41_0.tim, _ae.nvd, _ai.fdt, _ai_Lucene41_0.tip, _ae_Lucene41_0.pos, _ae.nvm, segments_a9, _ae.si, _ae_Lucene41_0.tip, _ai.nvm, _ai.si, _ae.fnm, _ai_Lucene41_0.doc, _ae.fdt, _ai.fdx, _ai.nvd, _ae_2.del, _ae.fdx, _ai_Lucene41_0.pos, _ae_Lucene41_0.doc]
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/elizaveta/boo/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@7bf0673e; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_aa,generation=370,filenames=[_aj_Lucene41_0.pos, _ae_Lucene41_0.tim, _ae.nvd, _ae_Lucene41_0.pos, _ae.nvm, _ae.si, _ae_Lucene41_0.tip, _aj.fnm, _aj_Lucene41_0.doc, _aj.nvd, _aj.fdx, _ae.fnm, _aj.fdt, _ae.fdt, _aj.nvm, _aj_Lucene41_0.tip, _ae_2.del, _ae.fdx, segments_aa, _aj.si, _aj_Lucene41_0.tim, _ae_Lucene41_0.doc]
+авг 30, 2015 5:34:17 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 370[_aj_Lucene41_0.pos, _ae_Lucene41_0.tim, _ae.nvd, _ae_Lucene41_0.pos, _ae.nvm, _ae.si, _ae_Lucene41_0.tip, _aj.fnm, _aj_Lucene41_0.doc, _aj.nvd, _aj.fdx, _ae.fnm, _aj.fdt, _ae.fdt, _aj.nvm, _aj_Lucene41_0.tip, _ae_2.del, _ae.fdx, segments_aa, _aj.si, _aj_Lucene41_0.tim, _ae_Lucene41_0.doc]
+авг 30, 2015 5:34:17 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@4fd6d6cf main
+авг 30, 2015 5:34:17 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [default] Registered new searcher Searcher@4fd6d6cf main{StandardDirectoryReader(segments_aa:1241 _ae(4.2):C40/6 _aj(4.2):C6)}
+авг 30, 2015 5:34:17 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+авг 30, 2015 5:34:17 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [default] webapp=/solr path=/update params={wt=ruby} {commit=} 0 553
+авг 30, 2015 7:48:23 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [default] webapp=/solr path=/update params={wt=ruby} {add=[User 4 (1510949051357462528)]} 0 33
+авг 30, 2015 7:48:23 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+авг 30, 2015 7:48:24 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/elizaveta/boo/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@7bf0673e; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_aa,generation=370,filenames=[_aj_Lucene41_0.pos, _ae_Lucene41_0.tim, _ae.nvd, _ae_Lucene41_0.pos, _ae.nvm, _ae.si, _ae_Lucene41_0.tip, _aj.fnm, _aj_Lucene41_0.doc, _aj.nvd, _aj.fdx, _ae.fnm, _aj.fdt, _ae.fdt, _aj.nvm, _aj_Lucene41_0.tip, _ae_2.del, _ae.fdx, segments_aa, _aj.si, _aj_Lucene41_0.tim, _ae_Lucene41_0.doc]
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/elizaveta/boo/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@7bf0673e; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_ab,generation=371,filenames=[_ak.nvm, _ak.si, _ak.fdx, _ae.si, _ak.fdt, _ak_Lucene41_0.tip, _aj.fnm, _ak_Lucene41_0.tim, _aj_Lucene41_0.doc, _aj.fdx, _ae.fnm, _aj.fdt, _ae.fdt, _ak_Lucene41_0.pos, _aj_1.del, _ae.fdx, _aj.si, segments_ab, _aj_Lucene41_0.pos, _ae.nvd, _ae_Lucene41_0.tim, _ae_Lucene41_0.pos, _ae.nvm, _ak.nvd, _ae_Lucene41_0.tip, _aj.nvd, _ak.fnm, _aj.nvm, _aj_Lucene41_0.tip, _ak_Lucene41_0.doc, _ae_2.del, _ae_Lucene41_0.doc, _aj_Lucene41_0.tim]
+авг 30, 2015 7:48:24 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 371[_ak.nvm, _ak.si, _ak.fdx, _ae.si, _ak.fdt, _ak_Lucene41_0.tip, _aj.fnm, _ak_Lucene41_0.tim, _aj_Lucene41_0.doc, _aj.fdx, _ae.fnm, _aj.fdt, _ae.fdt, _ak_Lucene41_0.pos, _aj_1.del, _ae.fdx, _aj.si, segments_ab, _aj_Lucene41_0.pos, _ae.nvd, _ae_Lucene41_0.tim, _ae_Lucene41_0.pos, _ae.nvm, _ak.nvd, _ae_Lucene41_0.tip, _aj.nvd, _ak.fnm, _aj.nvm, _aj_Lucene41_0.tip, _ak_Lucene41_0.doc, _ae_2.del, _ae_Lucene41_0.doc, _aj_Lucene41_0.tim]
+авг 30, 2015 7:48:24 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@797be525 main
+авг 30, 2015 7:48:24 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [default] Registered new searcher Searcher@797be525 main{StandardDirectoryReader(segments_ab:1244 _ae(4.2):C40/6 _aj(4.2):C6/1 _ak(4.2):C1)}
+авг 30, 2015 7:48:24 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+авг 30, 2015 7:48:24 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [default] webapp=/solr path=/update params={wt=ruby} {commit=} 0 665
+авг 31, 2015 11:21:44 AM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [default] webapp=/solr path=/update params={wt=ruby} {add=[User 1 (1511007772392554496)]} 0 93
+авг 31, 2015 11:21:44 AM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+авг 31, 2015 11:21:45 AM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/elizaveta/boo/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@7bf0673e; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_ab,generation=371,filenames=[_ak.nvm, _ak.si, _ak.fdx, _ae.si, _ak.fdt, _ak_Lucene41_0.tip, _aj.fnm, _ak_Lucene41_0.tim, _aj_Lucene41_0.doc, _aj.fdx, _ae.fnm, _aj.fdt, _ae.fdt, _ak_Lucene41_0.pos, _aj_1.del, _ae.fdx, _aj.si, segments_ab, _aj_Lucene41_0.pos, _ae.nvd, _ae_Lucene41_0.tim, _ae_Lucene41_0.pos, _ae.nvm, _ak.nvd, _ae_Lucene41_0.tip, _aj.nvd, _ak.fnm, _aj.nvm, _aj_Lucene41_0.tip, _ak_Lucene41_0.doc, _ae_2.del, _ae_Lucene41_0.doc, _aj_Lucene41_0.tim]
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/elizaveta/boo/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@7bf0673e; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_ac,generation=372,filenames=[_ak.nvm, _ak.si, _al_Lucene41_0.tim, _al_Lucene41_0.doc, _ak.fdx, _ae.si, _ak.fdt, _ak_Lucene41_0.tip, _aj.fnm, _ak_Lucene41_0.tim, _aj_Lucene41_0.doc, _aj.fdx, _ae.fnm, _aj.fdt, _al.si, _al_Lucene41_0.tip, _ae.fdt, _ak_Lucene41_0.pos, _ae.fdx, _al.nvd, _aj.si, _aj_2.del, _aj_Lucene41_0.pos, _ae.nvd, _ae_Lucene41_0.tim, segments_ac, _ae_Lucene41_0.pos, _ae.nvm, _al.nvm, _ak.nvd, _ae_Lucene41_0.tip, _aj.nvd, _ak.fnm, _al.fnm, _al_Lucene41_0.pos, _aj.nvm, _aj_Lucene41_0.tip, _al.fdt, _ak_Lucene41_0.doc, _ae_2.del, _al.fdx, _ae_Lucene41_0.doc, _aj_Lucene41_0.tim]
+авг 31, 2015 11:21:45 AM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 372[_ak.nvm, _ak.si, _al_Lucene41_0.tim, _al_Lucene41_0.doc, _ak.fdx, _ae.si, _ak.fdt, _ak_Lucene41_0.tip, _aj.fnm, _ak_Lucene41_0.tim, _aj_Lucene41_0.doc, _aj.fdx, _ae.fnm, _aj.fdt, _al.si, _al_Lucene41_0.tip, _ae.fdt, _ak_Lucene41_0.pos, _ae.fdx, _al.nvd, _aj.si, _aj_2.del, _aj_Lucene41_0.pos, _ae.nvd, _ae_Lucene41_0.tim, segments_ac, _ae_Lucene41_0.pos, _ae.nvm, _al.nvm, _ak.nvd, _ae_Lucene41_0.tip, _aj.nvd, _ak.fnm, _al.fnm, _al_Lucene41_0.pos, _aj.nvm, _aj_Lucene41_0.tip, _al.fdt, _ak_Lucene41_0.doc, _ae_2.del, _al.fdx, _ae_Lucene41_0.doc, _aj_Lucene41_0.tim]
+авг 31, 2015 11:21:46 AM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@56217711 main
+авг 31, 2015 11:21:46 AM org.apache.solr.core.SolrCore registerSearcher
+INFO: [default] Registered new searcher Searcher@56217711 main{StandardDirectoryReader(segments_ac:1247 _ae(4.2):C40/6 _aj(4.2):C6/2 _ak(4.2):C1 _al(4.2):C1)}
+авг 31, 2015 11:21:46 AM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+авг 31, 2015 11:21:46 AM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [default] webapp=/solr path=/update params={wt=ruby} {commit=} 0 1430
+сен 01, 2015 8:10:03 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [default] webapp=/solr path=/update params={wt=ruby} {add=[User 1 (1511131607718690816)]} 0 188
+сен 01, 2015 8:10:04 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+сен 01, 2015 8:10:05 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/elizaveta/boo/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@7bf0673e; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_ac,generation=372,filenames=[_ak.nvm, _ak.si, _al_Lucene41_0.tim, _al_Lucene41_0.doc, _ak.fdx, _ae.si, _ak.fdt, _ak_Lucene41_0.tip, _aj.fnm, _ak_Lucene41_0.tim, _aj_Lucene41_0.doc, _aj.fdx, _ae.fnm, _aj.fdt, _al.si, _al_Lucene41_0.tip, _ae.fdt, _ak_Lucene41_0.pos, _ae.fdx, _al.nvd, _aj.si, _aj_2.del, _aj_Lucene41_0.pos, _ae.nvd, _ae_Lucene41_0.tim, segments_ac, _ae_Lucene41_0.pos, _ae.nvm, _al.nvm, _ak.nvd, _ae_Lucene41_0.tip, _aj.nvd, _ak.fnm, _al.fnm, _al_Lucene41_0.pos, _aj.nvm, _aj_Lucene41_0.tip, _al.fdt, _ak_Lucene41_0.doc, _ae_2.del, _al.fdx, _ae_Lucene41_0.doc, _aj_Lucene41_0.tim]
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/elizaveta/boo/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@7bf0673e; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_ad,generation=373,filenames=[segments_ad, _am.nvm, _an.nvm, _an.si, _am_Lucene41_0.tip, _am_Lucene41_0.doc, _an_Lucene41_0.tim, _an_Lucene41_0.doc, _an.fnm, _am.fdt, _an_Lucene41_0.pos, _am.fnm, _am_Lucene41_0.pos, _an.nvd, _am.fdx, _an_Lucene41_0.tip, _an.fdx, _am_Lucene41_0.tim, _am.si, _an.fdt, _am.nvd, _am_1.del]
+сен 01, 2015 8:10:05 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 373[segments_ad, _am.nvm, _an.nvm, _an.si, _am_Lucene41_0.tip, _am_Lucene41_0.doc, _an_Lucene41_0.tim, _an_Lucene41_0.doc, _an.fnm, _am.fdt, _an_Lucene41_0.pos, _am.fnm, _am_Lucene41_0.pos, _an.nvd, _am.fdx, _an_Lucene41_0.tip, _an.fdx, _am_Lucene41_0.tim, _am.si, _an.fdt, _am.nvd, _am_1.del]
+сен 01, 2015 8:10:05 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@1404e91f main
+сен 01, 2015 8:10:06 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [default] Registered new searcher Searcher@1404e91f main{StandardDirectoryReader(segments_ad:1252 _am(4.2):C40/1 _an(4.2):C1)}
+сен 01, 2015 8:10:06 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+сен 01, 2015 8:10:06 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [default] webapp=/solr path=/update params={wt=ruby} {commit=} 0 1805
+сен 01, 2015 8:10:06 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [default] webapp=/solr path=/update params={wt=ruby} {add=[User 1 (1511131611256586240)]} 0 12
+сен 01, 2015 8:10:06 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+сен 01, 2015 8:10:07 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/elizaveta/boo/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@7bf0673e; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_ad,generation=373,filenames=[segments_ad, _am.nvm, _an.nvm, _an.si, _am_Lucene41_0.tip, _am_Lucene41_0.doc, _an_Lucene41_0.tim, _an_Lucene41_0.doc, _an.fnm, _am.fdt, _an_Lucene41_0.pos, _am.fnm, _am_Lucene41_0.pos, _an.nvd, _am.fdx, _an_Lucene41_0.tip, _an.fdx, _am_Lucene41_0.tim, _am.si, _an.fdt, _am.nvd, _am_1.del]
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/elizaveta/boo/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@7bf0673e; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_ae,generation=374,filenames=[segments_ae, _am.nvm, _ao.fnm, _ao.fdt, _am_Lucene41_0.tip, _am_Lucene41_0.doc, _ao.fdx, _ao.si, _ao.nvm, _ao_Lucene41_0.pos, _ao.nvd, _am.fdt, _ao_Lucene41_0.tim, _am.fnm, _ao_Lucene41_0.tip, _am_Lucene41_0.pos, _am.fdx, _ao_Lucene41_0.doc, _am_Lucene41_0.tim, _am.si, _am.nvd, _am_1.del]
+сен 01, 2015 8:10:07 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 374[segments_ae, _am.nvm, _ao.fnm, _ao.fdt, _am_Lucene41_0.tip, _am_Lucene41_0.doc, _ao.fdx, _ao.si, _ao.nvm, _ao_Lucene41_0.pos, _ao.nvd, _am.fdt, _ao_Lucene41_0.tim, _am.fnm, _ao_Lucene41_0.tip, _am_Lucene41_0.pos, _am.fdx, _ao_Lucene41_0.doc, _am_Lucene41_0.tim, _am.si, _am.nvd, _am_1.del]
+сен 01, 2015 8:10:07 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@1bdaad60 main
+сен 01, 2015 8:10:07 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [default] Registered new searcher Searcher@1bdaad60 main{StandardDirectoryReader(segments_ae:1256 _am(4.2):C40/1 _ao(4.2):C1)}
+сен 01, 2015 8:10:07 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+сен 01, 2015 8:10:07 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [default] webapp=/solr path=/update params={wt=ruby} {commit=} 0 554
+сен 02, 2015 9:16:47 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [default] webapp=/solr path=/update params={wt=ruby} {add=[User 1 (1511226402631843840)]} 0 725
+сен 02, 2015 9:16:48 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+сен 02, 2015 9:16:50 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/elizaveta/boo/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@7bf0673e; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_ae,generation=374,filenames=[segments_ae, _am.nvm, _ao.fnm, _ao.fdt, _am_Lucene41_0.tip, _am_Lucene41_0.doc, _ao.fdx, _ao.si, _ao.nvm, _ao_Lucene41_0.pos, _ao.nvd, _am.fdt, _ao_Lucene41_0.tim, _am.fnm, _ao_Lucene41_0.tip, _am_Lucene41_0.pos, _am.fdx, _ao_Lucene41_0.doc, _am_Lucene41_0.tim, _am.si, _am.nvd, _am_1.del]
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/elizaveta/boo/solr/default/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@7bf0673e; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_af,generation=375,filenames=[_am.nvm, _ap_Lucene41_0.pos, _ap.fdt, segments_af, _am_Lucene41_0.tip, _am_Lucene41_0.doc, _ap.fdx, _ap_Lucene41_0.tip, _ap.fnm, _ap.si, _ap_Lucene41_0.tim, _ap.nvd, _am.fdt, _am.fnm, _am_Lucene41_0.pos, _am.fdx, _ap_Lucene41_0.doc, _ap.nvm, _am_Lucene41_0.tim, _am.si, _am.nvd, _am_1.del]
+сен 02, 2015 9:16:50 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 375[_am.nvm, _ap_Lucene41_0.pos, _ap.fdt, segments_af, _am_Lucene41_0.tip, _am_Lucene41_0.doc, _ap.fdx, _ap_Lucene41_0.tip, _ap.fnm, _ap.si, _ap_Lucene41_0.tim, _ap.nvd, _am.fdt, _am.fnm, _am_Lucene41_0.pos, _am.fdx, _ap_Lucene41_0.doc, _ap.nvm, _am_Lucene41_0.tim, _am.si, _am.nvd, _am_1.del]
+сен 02, 2015 9:16:50 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@457293b main
+сен 02, 2015 9:16:50 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+сен 02, 2015 9:16:50 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [default] Registered new searcher Searcher@457293b main{StandardDirectoryReader(segments_af:1260 _am(4.2):C40/1 _ap(4.2):C1)}
+сен 02, 2015 9:16:50 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: [default] webapp=/solr path=/update params={wt=ruby} {commit=} 0 2512
+сен 02, 2015 9:16:59 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=Лиза&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=1 status=0 QTime=1016 
+сен 02, 2015 9:16:59 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=Лиза&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=95 
+сен 02, 2015 9:16:59 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=Лиза&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=38 
+сен 02, 2015 9:19:42 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=Лиза&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=1 status=0 QTime=2 
+сен 02, 2015 9:19:42 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=Лиза&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=126 
+сен 02, 2015 9:19:42 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=Лиза&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=2 
+сен 02, 2015 9:22:05 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=17 
+сен 02, 2015 9:22:05 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=18 
+сен 02, 2015 9:22:06 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=14 
+сен 02, 2015 9:22:14 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=0 status=0 QTime=2 
+сен 02, 2015 9:22:14 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=12 
+сен 02, 2015 9:22:14 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=2 
+сен 02, 2015 9:24:34 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=0 status=0 QTime=36 
+сен 02, 2015 9:24:35 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=1 
+сен 02, 2015 9:24:35 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=21 
+сен 02, 2015 9:27:42 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=1 
+сен 02, 2015 9:27:42 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=1 
+сен 02, 2015 9:27:42 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=1 
+сен 02, 2015 9:27:52 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=0 status=0 QTime=2 
+сен 02, 2015 9:27:52 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=15 
+сен 02, 2015 9:27:52 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=2 
+сен 02, 2015 9:35:01 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=2 
+сен 02, 2015 9:35:01 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=0 
+сен 02, 2015 9:35:01 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=1 
+сен 02, 2015 9:35:04 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=0 status=0 QTime=34 
+сен 02, 2015 9:35:04 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=8 
+сен 02, 2015 9:35:04 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=10 
+сен 02, 2015 9:35:21 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=0 
+сен 02, 2015 9:35:21 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=10 
+сен 02, 2015 9:35:21 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=0 
+сен 02, 2015 9:35:23 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=0 status=0 QTime=2 
+сен 02, 2015 9:35:24 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=22 
+сен 02, 2015 9:35:24 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=1 
+сен 02, 2015 9:36:26 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=110 
+сен 02, 2015 9:36:27 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=44 
+сен 02, 2015 9:36:27 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=0 
+сен 02, 2015 9:36:32 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=0 status=0 QTime=1 
+сен 02, 2015 9:36:32 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=2 
+сен 02, 2015 9:36:32 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=0 
+сен 02, 2015 9:36:59 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=1 
+сен 02, 2015 9:36:59 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=0 
+сен 02, 2015 9:36:59 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=0 
+сен 02, 2015 9:37:01 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=0 status=0 QTime=2 
+сен 02, 2015 9:37:01 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=2 
+сен 02, 2015 9:37:01 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=2 
+сен 02, 2015 9:37:18 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=0 status=0 QTime=1 
+сен 02, 2015 9:37:18 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=1 
+сен 02, 2015 9:37:18 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=2 
+сен 02, 2015 9:38:11 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=8 
+сен 02, 2015 9:38:11 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=15 
+сен 02, 2015 9:38:12 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=1 
+сен 02, 2015 9:38:20 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=0 status=0 QTime=56 
+сен 02, 2015 9:38:20 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=2 
+сен 02, 2015 9:38:20 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=2 
+сен 02, 2015 9:39:25 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=0 status=0 QTime=9 
+сен 02, 2015 9:39:25 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=2 
+сен 02, 2015 9:39:25 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=2 
+сен 02, 2015 9:40:16 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=16 
+сен 02, 2015 9:40:16 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=1 
+сен 02, 2015 9:40:16 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=1 
+сен 02, 2015 9:40:18 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=0 status=0 QTime=20 
+сен 02, 2015 9:40:18 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=2 
+сен 02, 2015 9:40:18 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=1 
+сен 02, 2015 9:40:28 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=0 status=0 QTime=3 
+сен 02, 2015 9:40:28 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=20 
+сен 02, 2015 9:40:28 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=9 
+сен 02, 2015 9:40:30 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=0 status=0 QTime=1 
+сен 02, 2015 9:40:30 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=2 
+сен 02, 2015 9:40:30 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=2 
+сен 02, 2015 9:40:59 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=0 status=0 QTime=13 
+сен 02, 2015 9:40:59 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=3 
+сен 02, 2015 9:40:59 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=14 
+сен 02, 2015 9:41:29 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=1 
+сен 02, 2015 9:41:29 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=12 
+сен 02, 2015 9:41:29 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=1 
+сен 02, 2015 9:41:32 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=0 status=0 QTime=9 
+сен 02, 2015 9:41:32 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=2 
+сен 02, 2015 9:41:32 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=1 
+сен 02, 2015 9:42:04 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=10 
+сен 02, 2015 9:42:04 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=1 
+сен 02, 2015 9:42:04 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=12 
+сен 02, 2015 9:42:08 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=0 status=0 QTime=16 
+сен 02, 2015 9:42:08 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=31 
+сен 02, 2015 9:42:08 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=0 
+сен 02, 2015 9:47:46 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=1 
+сен 02, 2015 9:47:46 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=11 
+сен 02, 2015 9:47:46 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=1 
+сен 02, 2015 9:47:49 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=0 status=0 QTime=22 
+сен 02, 2015 9:47:49 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=3 
+сен 02, 2015 9:47:49 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=10 
+сен 02, 2015 9:48:35 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=15 
+сен 02, 2015 9:48:35 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=1 
+сен 02, 2015 9:48:35 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=1 
+сен 02, 2015 9:48:38 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=0 status=0 QTime=2 
+сен 02, 2015 9:48:38 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=16 
+сен 02, 2015 9:48:38 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=1 
+сен 02, 2015 9:49:03 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=14 
+сен 02, 2015 9:49:03 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=1 
+сен 02, 2015 9:49:03 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=0 
+сен 02, 2015 9:49:06 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=0 status=0 QTime=1 
+сен 02, 2015 9:49:06 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=17 
+сен 02, 2015 9:49:06 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=11 
+сен 02, 2015 9:51:27 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=11 
+сен 02, 2015 9:51:27 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=1 
+сен 02, 2015 9:51:27 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=1 
+сен 02, 2015 9:51:29 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=0 status=0 QTime=2 
+сен 02, 2015 9:51:29 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=2 
+сен 02, 2015 9:51:29 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=11 
+сен 02, 2015 9:52:27 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=2 
+сен 02, 2015 9:52:27 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=1 
+сен 02, 2015 9:52:27 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=1 
+сен 02, 2015 9:52:29 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=0 status=0 QTime=15 
+сен 02, 2015 9:52:29 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=14 
+сен 02, 2015 9:52:29 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=23 
+сен 02, 2015 9:52:47 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=9 
+сен 02, 2015 9:52:47 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=1 
+сен 02, 2015 9:52:48 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=0 
+сен 02, 2015 9:52:50 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=0 status=0 QTime=1 
+сен 02, 2015 9:52:50 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=18 
+сен 02, 2015 9:52:50 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=1 
+сен 02, 2015 9:52:51 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=1 
+сен 02, 2015 9:52:51 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=10 
+сен 02, 2015 9:52:51 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=9 
+сен 02, 2015 9:53:27 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=0 status=0 QTime=3 
+сен 02, 2015 9:53:27 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=19 
+сен 02, 2015 9:53:27 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=2 
+сен 02, 2015 9:53:39 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=0 status=0 QTime=15 
+сен 02, 2015 9:53:39 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=3 
+сен 02, 2015 9:53:39 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=1 
+сен 02, 2015 9:53:55 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=7 
+сен 02, 2015 9:53:55 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=19 
+сен 02, 2015 9:53:55 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=13 
+сен 02, 2015 9:53:57 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=0 status=0 QTime=9 
+сен 02, 2015 9:53:58 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=2 
+сен 02, 2015 9:53:58 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=0 
+сен 02, 2015 9:54:30 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:User&rows=30} hits=6 status=0 QTime=16 
+сен 02, 2015 9:54:30 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Song&rows=30} hits=16 status=0 QTime=0 
+сен 02, 2015 9:54:30 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={start=0&q=*:*&wt=ruby&fq=type:Video&rows=30} hits=11 status=0 QTime=9 
+сен 02, 2015 9:54:32 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=first_name_text+last_name_text+email_text&wt=ruby&fq=type:User&rows=30&defType=edismax} hits=0 status=0 QTime=3 
+сен 02, 2015 9:54:32 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text+performer_text+genre_text&wt=ruby&fq=type:Song&rows=30&defType=edismax} hits=0 status=0 QTime=3 
+сен 02, 2015 9:54:32 PM org.apache.solr.core.SolrCore execute
+INFO: [default] webapp=/solr path=/select params={fl=*+score&start=0&q=12121&qf=title_text&wt=ruby&fq=type:Video&rows=30&defType=edismax} hits=0 status=0 QTime=1 

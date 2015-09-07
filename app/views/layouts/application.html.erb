@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="The best social network ever."/>
+  <meta name="keywords" content="html5, responsive, image gallery, masonry, picture, images, sizes, fluid, history api, visibility api social network, fun, girls, friends, content, music, video"/>
+  <meta name="author" content="AliceOJJm"/>
+  <title>Boo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <base href="/app/">
+</head>
+<body ng-app="boo">
+	<div ng-include="'navbar.html'"></div>
+	<div class="wrapper">
+	    <div class="full">
+	    	<div class="padding">
+	          <ui-view></ui-view>
+	    	</div>
+	    </div>
+	</div>
+</body>
+</html>

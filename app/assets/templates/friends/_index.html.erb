@@ -1,0 +1,22 @@
+<ul class="nav nav-tabs">
+  <li><a ng-href="/app/id{{user.id}}/friends">Friends</a></li>
+  <li><a ng-href="/app/id{{user.id}}/subscribers">Subscribers</a></li>
+  <li><a ng-href="/app/id{{user.id}}/new_subscribers"  ng-show = "user.id == current_user.id">New subscribers</a></li>
+  <li><a ng-href="/app/id{{user.id}}/subscriptions">Subscriptions</a></li>
+</ul>
+
+<div ng-show = "friends.length == 0">
+	<h4 align = center ng-show = "user.id == current_user.id">You have no friends</h4>
+	<h4 align = center ng-show = "user.id != current_user.id">{{user.first_name}} has no friends.</h4>
+</div>
+
+<div ng-repeat="friend in friends" class="panel panel-default">
+  <div class="panel-body">
+	  <div class="col-md-2">
+		<user-panel user=friend.user></user-panel>
+	  </div>
+	  <div class="col-md-3" ng-show="current_user.id == user.id">
+		<button class="button button-raised button-primary button-pill button-small" ng-click="deleteFriend(current_user.id, friend)">Delete from friends</button>
+	  </div>                           
+  </div>
+</div>

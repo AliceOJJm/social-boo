@@ -1,0 +1,9 @@
+I"Ó(function() {
+  $(document).ready(function() {
+    return $(document).on("ajax:complete", "#relations", function(e, data, status, xhr) {
+      return $(this).load(window.location);
+    });
+  });
+
+}).call(this);
+:ET

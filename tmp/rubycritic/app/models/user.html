@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RubyCritic</title>
+    <link href="../../assets/stylesheets/application.css" media="screen, projection, print" rel="stylesheet" type="text/css">
+    <link href="../../assets/stylesheets/prettify.custom_theme.css" media="screen, projection, print" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header class="project-header group">
+      <div class="container">
+        <h1 class="logo"><a href="../../overview.html" class="logo-link">RubyCritic</a></h1>
+        <nav class="project-nav">
+          <a href="../../overview.html" class="project-nav-item">Overview</a>
+          <a href="../../code_index.html" class="project-nav-item">Code</a>
+          <a href="../../smells_index.html" class="project-nav-item">Smells</a>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <div class="file-header group rated">
+  <span class="rating rating-a circled-text circle">
+    A
+  </span>
+  <h2 class="file-name">User</h2>
+
+  <span class="file-committed-at">
+    
+      Updated <time class='js-timeago' datetime='2015-07-19 12:48:33 +0300'>2015-07-19 12:48:33 +0300</time>
+    
+  </span>
+
+  <div class="file-stats group">
+    <div class="file-stat">
+      67 complexity
+    </div>
+    <div class="file-stat">
+      9.6 complexity per method
+    </div>
+    <div class="file-stat">
+      10 churn
+    </div>
+    <div class="file-stat">
+      7 methods
+    </div>
+    <div class="file-stat">
+      0 duplication
+    </div>
+  </div>
+
+  
+    <button id="js-toggle-smells" class="smells-toggle-button button">Toggle Smells</button>
+  
+</div>
+
+<code class="prettyprint linenums lang-ruby file-code js-file-code">class User &lt; ActiveRecord::Base<ul class="nocode smells js-smells">  <li class="smell old">    <span class="description">(PrimaDonnaMethod) User has prima donna method `subscribe!`          </span>  </li>  <li class="smell old">    <span class="description">(PrimaDonnaMethod) User has prima donna method `unsubscribe!`          </span>  </li></ul>
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,# :confirmable,
+         :recoverable, :trackable, :validatable
+         
+  before_create :grand_users_abilities
+   
+  has_attached_file :avatar, :styles =&gt; { :medium =&gt; &quot;300x300&gt;&quot;, :thumb =&gt; &quot;100x100&gt;&quot; }, :default_url =&gt; &quot;/images/userpic.jpg&quot;
+
+  validates_attachment :avatar, :content_type =&gt; { :content_type =&gt; /\Aimage\/.*\Z/ },
+                                :size =&gt; { :less_than =&gt; 1.megabytes }
+  
+  has_many :posts 
+  has_many :pictures
+  has_many :songs
+  has_many :videos 
+    
+  has_many :users_roles
+  has_many :roles, :through =&gt; :users_roles
+  
+  has_many :subscriptions, foreign_key: :subscriber_id, dependent: :destroy
+  has_many :leaders, through: :subscriptions
+  has_many :reverse_subscriptions, foreign_key: :leader_id, class_name: &#39;Subscription&#39;, dependent: :destroy
+  has_many :subscribers, through: :reverse_subscriptions
+  
+  has_many :friendships
+  has_many :friends, :through =&gt; :friendships
+  has_many :inverse_friendships, :class_name =&gt; &quot;Friendship&quot;, :foreign_key =&gt; &quot;friend_id&quot;
+  has_many :inverse_friends, :through =&gt; :inverse_friendships, :source =&gt; :user
+
+  has_and_belongs_to_many :dialogues
+  has_many :messages
+  
+  def subscribed?(leader)
+    leaders.include? leader
+  end
+  
+  def is_friend?(friend)
+    friends.include? friend
+  end
+  
+  def subscribe!(leader)
+    if leader != self &amp;&amp; !subscribed?(leader)
+      if leader.subscribed?(self)
+        friends &lt;&lt; leader
+        leader.friends &lt;&lt; self
+        subscribers.delete leader
+        leader.leaders.delete self
+      else
+        leaders &lt;&lt; leader
+      end
+    end
+  end
+  
+  def unsubscribe!(leader)
+    if leader != self
+      if subscribed?(leader)
+        leaders.delete leader
+        leader.subscribers.delete self
+      elsif is_friend? leader
+        friends.delete leader
+        leader.friends.delete self
+        leader.subscribe!(self)
+      end
+    end
+  end
+  
+  def send_message (dialogue, message)
+    response = Message.new
+    dialogue.users.each do |user|
+      msg = Message.create(user_id: user.id, sender_id: self.id, text: message)
+      dialogue.messages &lt;&lt; msg
+      if user.id == self.id
+        response = msg
+      end
+    end
+    response ||= &quot;500&quot;
+  end
+  
+  def relations user
+    if self == user
+      relations = &quot;self&quot;
+    elsif self.is_friend? user
+      relations = &quot;friend&quot;
+    elsif user.subscribed? self
+      relations = &quot;leader&quot;
+    elsif self.subscribed? user
+      relations = &quot;subscriber&quot;
+    else
+      relations = &quot;none&quot;
+    end
+    relations
+  end
+  
+  private
+  
+  def grand_users_abilities
+    self.roles &lt;&lt; Role.find_by_name(:user)  
+  end
+  
+end
+</code>
+
+    </div>
+    <script src='../../assets/javascripts/jquery-2.1.0.js'></script>
+    <script src='../../assets/javascripts/jquery.tablesorter.js'></script>
+    <script src='../../assets/javascripts/jquery.floatThead-v1.2.7.js'></script>
+    <script src='../../assets/javascripts/jquery.timeago-v1.4.1.js'></script>
+    <script src='../../assets/javascripts/highcharts.src-4.0.1.js'></script>
+    <script src='../../assets/javascripts/jquery.scrollTo-1.4.11.js'></script>
+    <script src='../../assets/javascripts/prettify-4-Mar-2013.js'></script>
+    <script src='../../assets/javascripts/application.js'></script>
+  </body>
+</html>

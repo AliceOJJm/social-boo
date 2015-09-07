@@ -1,0 +1,9 @@
+I"þ(function() {
+  $(document).ready(function() {
+    return $(document).on("ajax:complete", "#new_subscribers_panel", function(e, data, status, xhr) {
+      return $(this).load(window.location.pathname + " #new_subscribers");
+    });
+  });
+
+}).call(this);
+:ET

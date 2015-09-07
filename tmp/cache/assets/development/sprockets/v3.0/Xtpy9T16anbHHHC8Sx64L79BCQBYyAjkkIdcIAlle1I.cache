@@ -1,0 +1,7 @@
+I"¸(function() {
+  $(document).on("ajax:complete", "#relations", function(e, data, status, xhr) {
+    return $(this).load(window.location.pathname + " #relations");
+  });
+
+}).call(this);
+:ET

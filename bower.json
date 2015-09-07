@@ -1,0 +1,19 @@
+{
+  "name": "boo",
+  "version": "0.0.0",
+  "main": "app/assets/javascripts/application.js",
+  "dependencies": {
+    "angular": "~1.4.0",
+    "angular-ui-router": "~0.2.15",
+    "bootstrap": "~3.3.4",
+    "angular-devise": "~1.1.0",
+    "Buttons": "~2.0.0",
+    "angular-route": "latest",
+    "ng-file-upload": "~5.0.9",
+    "ng-file-upload-shim": "latest",
+    "angular-xeditable": "~0.1.9",
+    "angular-touch": "~1.4.3",
+    "ng-tags-input": "3.0.0",
+    "angular-ui-notification": "~0.0.12"
+  }
+}

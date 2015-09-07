@@ -1,0 +1,9 @@
+I"›(function() {
+  $(document).ready(function() {
+    return $(a['name="tab"']).on("click", function() {
+      return alert(9);
+    });
+  });
+
+}).call(this);
+:ET

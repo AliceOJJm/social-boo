@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RubyCritic</title>
+    <link href="../../assets/stylesheets/application.css" media="screen, projection, print" rel="stylesheet" type="text/css">
+    <link href="../../assets/stylesheets/prettify.custom_theme.css" media="screen, projection, print" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header class="project-header group">
+      <div class="container">
+        <h1 class="logo"><a href="../../overview.html" class="logo-link">RubyCritic</a></h1>
+        <nav class="project-nav">
+          <a href="../../overview.html" class="project-nav-item">Overview</a>
+          <a href="../../code_index.html" class="project-nav-item">Code</a>
+          <a href="../../smells_index.html" class="project-nav-item">Smells</a>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <div class="file-header group rated">
+  <span class="rating rating-a circled-text circle">
+    A
+  </span>
+  <h2 class="file-name">ApplicationController</h2>
+
+  <span class="file-committed-at">
+    
+      Updated <time class='js-timeago' datetime='2015-07-19 12:48:33 +0300'>2015-07-19 12:48:33 +0300</time>
+    
+  </span>
+
+  <div class="file-stats group">
+    <div class="file-stat">
+      21 complexity
+    </div>
+    <div class="file-stat">
+      5.3 complexity per method
+    </div>
+    <div class="file-stat">
+      8 churn
+    </div>
+    <div class="file-stat">
+      4 methods
+    </div>
+    <div class="file-stat">
+      0 duplication
+    </div>
+  </div>
+
+  
+</div>
+
+<code class="prettyprint linenums lang-ruby file-code js-file-code">class ApplicationController &lt; ActionController::Base
+  
+  protect_from_forgery with: :exception
+  after_filter :set_csrf_cookie_for_ng
+  respond_to :json
+  
+  rescue_from CanCan::AccessDenied do |exception|
+    render :file =&gt; &quot;#{Rails.root}/app/assets/templates/403.html&quot;, :status =&gt; 403, :layout =&gt; false
+  end
+  
+  def intercept_html_requests     
+    redirect_to(&#39;/&#39;) if request.format == Mime::HTML   
+  end
+
+  def set_csrf_cookie_for_ng     
+    cookies[&#39;XSRF-TOKEN&#39;] = form_authenticity_token if protect_against_forgery?   
+  end      
+
+  rescue_from ActionController::InvalidAuthenticityToken do |exception|     
+    cookies[&#39;XSRF-TOKEN&#39;] = form_authenticity_token if protect_against_forgery?     
+    message = &#39;Rails CSRF token error, please try again&#39;     
+    render_with_protection(message.to_json, {:status =&gt; :unprocessable_entity}) 
+  end
+    
+  def render_with_protection(object, parameters = {})
+    render parameters.merge(content_type: &#39;application/json&#39;, text: &quot;)]}&#39;,\n&quot; + object.to_json)
+  end
+
+  protected
+
+  def verified_request?
+    super || form_authenticity_token == request.headers[&#39;X-XSRF-TOKEN&#39;]
+  end
+
+end
+</code>
+
+    </div>
+    <script src='../../assets/javascripts/jquery-2.1.0.js'></script>
+    <script src='../../assets/javascripts/jquery.tablesorter.js'></script>
+    <script src='../../assets/javascripts/jquery.floatThead-v1.2.7.js'></script>
+    <script src='../../assets/javascripts/jquery.timeago-v1.4.1.js'></script>
+    <script src='../../assets/javascripts/highcharts.src-4.0.1.js'></script>
+    <script src='../../assets/javascripts/jquery.scrollTo-1.4.11.js'></script>
+    <script src='../../assets/javascripts/prettify-4-Mar-2013.js'></script>
+    <script src='../../assets/javascripts/application.js'></script>
+  </body>
+</html>

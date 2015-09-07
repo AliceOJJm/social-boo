@@ -1,0 +1,31 @@
+// Place all the styles related to the comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.thumbnail {
+    padding:0px;
+}
+.cpanel {
+  position:relative;
+}
+.cpanel>.panel-heading:after,.cpanel>.panel-heading:before{
+  position:absolute;
+  top:11px;left:-16px;
+  right:100%;
+  width:0;
+  height:0;
+  display:block;
+  content:" ";
+  border-color:transparent;
+  border-style:solid solid outset;
+  pointer-events:none;
+}
+.cpanel>.panel-heading:after{
+  border-width:7px;
+  border-right-color:#f7f7f7;
+  margin-top:1px;
+  margin-left:2px;
+}
+.cpanel>.panel-heading:before{
+  border-right-color:#ddd;
+  border-width:8px;
+}

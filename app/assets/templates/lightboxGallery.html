@@ -1,0 +1,73 @@
+<div class="modal-body" id="modal"
+    ng-swipe-left="Lightbox.nextImage()"
+    ng-swipe-right="Lightbox.prevImage()">
+  <!-- navigation -->
+  <div class="lightbox-nav">
+    <!-- close button -->
+    <button class="close" aria-hidden="true" ng-click="$dismiss()">×</button>
+
+    <div class="btn-group">
+      <a class="btn btn-xs btn-default" ng-click="Lightbox.prevImage()" translate>
+        ‹ Previous
+      </a>
+
+      <a ng-href="{{Lightbox.imageUrl}}" target="_blank"
+          class="btn btn-xs btn-default" title="Open in new tab" translate>
+        Open image in new tab
+      </a>
+
+      <a class="btn btn-xs btn-default" ng-click="Lightbox.nextImage()" translate>
+        Next ›
+      </a>
+    </div>
+  </div>
+
+  <div class="lightbox-image-container">
+    <!-- caption -->
+    <div class="lightbox-image-caption">
+      <span>{{Lightbox.imageCaption}}</span>
+    </div>
+
+    <!-- video, requires 'videosharing-embed' module -->
+    <div ng-if="Lightbox.showVideo" class="embed-responsive embed-responsive-16by9">
+      <embed-video lightbox-video lightbox-src="{{Lightbox.imageUrl}}" ng-href="{{Lightbox.imageUrl}}" controls="1" showinfo="0" title="0" byline="0" portrait="0" info="0" badge="0" class="embed-responsive-item"></embed-video>
+    </div>
+    <!-- image -->
+    <img ng-if='!Lightbox.showVideo' lightbox-src="{{Lightbox.imageUrl}}" ng-click="Lightbox.nextImage()">
+  </div>
+  <button ng-show="Lightbox.current_user_id == Lightbox.picture.picture.picture.user_id" ng-click="Lightbox.deletePicture()">Delete</button>
+  <button ng-show="Lightbox.current_user_id == Lightbox.picture.picture.picture.user_id" ng-click="Lightbox.setAvatar()">Set as avatar</button>
+    <tags-input ng-disabled="Lightbox.current_user_id != Lightbox.picture.picture.picture.user_id" ng-model="Lightbox.picture.tags" on-tag-removed="Lightbox.deleteTag($tag)" on-tag-added="Lightbox.addTag($tag)" class="ti-input-sm">
+	  <auto-complete source="Lightbox.loadTags($query)"></auto-complete>
+	</tags-input>
+    <form ng-show="Lightbox.current_user_id != 0" ng-submit="Lightbox.addComment()" role="form">
+        <div class="input-group">
+          <div class="input-group-btn">
+		    <button class="btn btn-default" type="button" ng-click="Lightbox.like()">{{Lightbox.picture.picture.picture.likers_count}}&nbsp;<i class="glyphicon glyphicon-thumbs-up"></i></button>
+          	<button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-share"></i></button>
+          </div>
+          <input type="text" class="form-control" placeholder="Add a comment.." ng-model="Lightbox.comment">
+        </div>
+    </form><br>
+    <div ng-repeat="comment in Lightbox.picture.root_comments">
+		<div class="col-sm-2">
+			<div class="thumbnail">
+				<a ng-href="/app/id{{comment.content.comment.user_id}}">
+					<img ng-if="comment.user_pic" ng-src="{{comment.user_pic}}" alt="Avatar" class="img-responsive user-photo">
+				    <img ng-if="!comment.user_pic" class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png" alt="Avatar">
+				</a>
+			</div><!-- /thumbnail -->
+		</div><!-- /col-sm-1 -->
+		<div class="col-sm-10">
+			<div class="cpanel panel panel-default">
+				<div class="panel-heading">
+					<strong>{{comment.user_name}}</strong> <span class="text-muted">{{comment.content.comment.created_at | date : 'MMM d, y h:mm a'}}</span>
+					<a ng-show="Lightbox.current_user_id == comment.content.comment.user_id" class="close" ng-click="Lightbox.deleteComment(comment)">×</a><br>
+				</div>
+				<div class="panel-body">
+					{{comment.content.comment.body}}
+				</div><!-- /panel-body -->
+			</div><!-- /panel panel-default -->
+		</div><!-- /col-sm-5 -->
+	</div>&nbsp;
+</div>

@@ -1,0 +1,13 @@
+<form ng-submit="login()">
+	<div class="sign-form">   
+	  <p class="form-signin-heading">Welcome Back! Please Sign In</p>
+	  <hr class="colorgraph">
+	  <p class="alert alert-danger" ng-show="errors">{{errors}}</p>
+	  <label>Email</label>
+	  <input type="email" class="form-control" placeholder="Email" ng-model="user.email"><br />
+	  <label>Password</label>
+	  <input type="password" class="form-control" placeholder="Password" ng-model="user.password"><br />
+	  <input type="submit" class="btn btn-lg btn-primary btn-block" value="Log In">
+	</div>
+</form>
+

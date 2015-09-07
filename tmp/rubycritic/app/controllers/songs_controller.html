@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RubyCritic</title>
+    <link href="../../assets/stylesheets/application.css" media="screen, projection, print" rel="stylesheet" type="text/css">
+    <link href="../../assets/stylesheets/prettify.custom_theme.css" media="screen, projection, print" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header class="project-header group">
+      <div class="container">
+        <h1 class="logo"><a href="../../overview.html" class="logo-link">RubyCritic</a></h1>
+        <nav class="project-nav">
+          <a href="../../overview.html" class="project-nav-item">Overview</a>
+          <a href="../../code_index.html" class="project-nav-item">Code</a>
+          <a href="../../smells_index.html" class="project-nav-item">Smells</a>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <div class="file-header group rated">
+  <span class="rating rating-c circled-text circle">
+    C
+  </span>
+  <h2 class="file-name">SongsController</h2>
+
+  <span class="file-committed-at">
+    
+      Updated <time class='js-timeago' datetime='2015-07-19 12:48:33 +0300'>2015-07-19 12:48:33 +0300</time>
+    
+  </span>
+
+  <div class="file-stats group">
+    <div class="file-stat">
+      58 complexity
+    </div>
+    <div class="file-stat">
+      11.6 complexity per method
+    </div>
+    <div class="file-stat">
+      4 churn
+    </div>
+    <div class="file-stat">
+      5 methods
+    </div>
+    <div class="file-stat">
+      50 duplication
+    </div>
+  </div>
+
+  
+    <button id="js-toggle-smells" class="smells-toggle-button button">Toggle Smells</button>
+  
+</div>
+
+<code class="prettyprint linenums lang-ruby file-code js-file-code">class SongsController &lt; ApplicationController
+  load_and_authorize_resource
+  
+  def index<ul class="nocode smells js-smells">  <li class="smell old">    <span class="description">(DuplicateCode) Similar code found in 4 nodes                        <a href="pictures_controller.html#L4" class="js-smell-location">0</a>                  <a href="posts_controller.html#L5" class="js-smell-location">1</a>                  <a href="songs_controller.html#L4" class="js-smell-location">2</a>                  <a href="videos_controller.html#L4" class="js-smell-location">3</a>                  </span>  </li></ul>
+    @songs = User.find(params[:user_id]).songs
+    respond_to do |format|
+      format.html
+      format.json { render json: @songs}
+    end
+  end
+  
+  def create<ul class="nocode smells js-smells">  <li class="smell old">    <span class="description">(FeatureEnvy) SongsController#create refers to song more than self          </span>  </li></ul>
+    song = Song.create(song_params)
+    song.url = song.file.url
+    song.performer, song.title = song.metadata.values_at(&#39;artist&#39;, &#39;title&#39;)
+    if !song.title.present? 
+      song.title = song.file_file_name
+    end
+    song.save!
+    
+    respond_to do |format|
+      format.html
+      format.json { render json: song}
+    end
+  end
+  
+  def update
+    song = Song.find(params[:id])
+    song.title = params[:title]
+    song.performer = params[:performer]
+    song.save!
+    respond_to do |format|
+      format.html
+      format.json { render json: {status: &quot;OK&quot;}}
+    end
+  end
+  
+  def destroy<ul class="nocode smells js-smells">  <li class="smell old">    <span class="description">(DuplicateCode) Similar code found in 3 nodes                        <a href="pictures_controller.html#L24" class="js-smell-location">0</a>                  <a href="songs_controller.html#L38" class="js-smell-location">1</a>                  <a href="videos_controller.html#L32" class="js-smell-location">2</a>                  </span>  </li></ul>
+    song = Song.find params[:id]
+    
+    song.file.destroy
+    song.destroy
+    
+    respond_to do |format|
+      format.html
+      format.json { render json: {status: &quot;OK&quot;}}
+    end
+  end
+  
+  private
+
+  def song_params
+    params.require(:song).permit!
+  end
+  
+end
+</code>
+
+    </div>
+    <script src='../../assets/javascripts/jquery-2.1.0.js'></script>
+    <script src='../../assets/javascripts/jquery.tablesorter.js'></script>
+    <script src='../../assets/javascripts/jquery.floatThead-v1.2.7.js'></script>
+    <script src='../../assets/javascripts/jquery.timeago-v1.4.1.js'></script>
+    <script src='../../assets/javascripts/highcharts.src-4.0.1.js'></script>
+    <script src='../../assets/javascripts/jquery.scrollTo-1.4.11.js'></script>
+    <script src='../../assets/javascripts/prettify-4-Mar-2013.js'></script>
+    <script src='../../assets/javascripts/application.js'></script>
+  </body>
+</html>

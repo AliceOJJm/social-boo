@@ -1,0 +1,10 @@
+I"¥(function() {
+  $(document).ready(function() {
+    var name;
+    return $(a[name = 'tab']).click()(function() {
+      return alert(9);
+    });
+  });
+
+}).call(this);
+:ET
